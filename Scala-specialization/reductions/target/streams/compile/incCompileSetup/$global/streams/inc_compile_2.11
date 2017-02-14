@@ -1,0 +1,546 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes
+compile options:
+1 items
+0 -> -deprecation
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.11.7
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+40 items
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/common/package$.class
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/common/package$DefaultTaskScheduler$$anon$1.class
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/common/package$DefaultTaskScheduler.class
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/common/package$TaskScheduler.class
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/common/package.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$$anonfun$4.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$$anonfun$5.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$$anonfun$downsweep$1.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$$anonfun$downsweep$2.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$Leaf$.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$Leaf.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$Node$.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$Node.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$Tree.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSightRunner$$anonfun$1.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSightRunner$$anonfun$2.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSightRunner$$anonfun$3.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSightRunner$.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSightRunner.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChange$$anonfun$3.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChange$$anonfun$4.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChange$$anonfun$combinedThreshold$1.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChange$$anonfun$moneyThreshold$1.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChange$$anonfun$totalCoinsThreshold$1.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChange$.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChange.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChangeRunner$$anonfun$1.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChangeRunner$$anonfun$2.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChangeRunner$.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChangeRunner.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancing$$anonfun$3.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancing$$anonfun$4.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancing$.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancing.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancingRunner$$anonfun$1.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancingRunner$$anonfun$2.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancingRunner$.class
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> /Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancingRunner.class
+binary dependencies:
+11 items
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> /Users/Granium/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/.ivy2/cache/com.storm-enroute/scalameter-core_2.11/jars/scalameter-core_2.11-0.6.jar
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /Users/Granium/.ivy2/cache/com.storm-enroute/scalameter-core_2.11/jars/scalameter-core_2.11-0.6.jar
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /Users/Granium/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> /Users/Granium/.ivy2/cache/com.storm-enroute/scalameter-core_2.11/jars/scalameter-core_2.11-0.6.jar
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> /Users/Granium/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+3 items
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /Users/Granium/Downloads/reductions/src/main/scala/common/package.scala
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /Users/Granium/Downloads/reductions/src/main/scala/common/package.scala
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> /Users/Granium/Downloads/reductions/src/main/scala/common/package.scala
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+40 items
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> common.package
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> common.package$
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> common.package$DefaultTaskScheduler
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> common.package$DefaultTaskScheduler$$anon$1
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> common.package$TaskScheduler
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSight
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSight$
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSight$$anonfun$4
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSight$$anonfun$5
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSight$$anonfun$downsweep$1
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSight$$anonfun$downsweep$2
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSight$Leaf
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSight$Leaf$
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSight$Node
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSight$Node$
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSight$Tree
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSightRunner
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSightRunner$
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSightRunner$$anonfun$1
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSightRunner$$anonfun$2
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions.LineOfSightRunner$$anonfun$3
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> reductions.ParallelCountChange
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> reductions.ParallelCountChange$
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> reductions.ParallelCountChange$$anonfun$3
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> reductions.ParallelCountChange$$anonfun$4
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> reductions.ParallelCountChange$$anonfun$combinedThreshold$1
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> reductions.ParallelCountChange$$anonfun$moneyThreshold$1
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> reductions.ParallelCountChange$$anonfun$totalCoinsThreshold$1
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> reductions.ParallelCountChangeRunner
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> reductions.ParallelCountChangeRunner$
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> reductions.ParallelCountChangeRunner$$anonfun$1
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> reductions.ParallelCountChangeRunner$$anonfun$2
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> reductions.ParallelParenthesesBalancing
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> reductions.ParallelParenthesesBalancing$
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> reductions.ParallelParenthesesBalancing$$anonfun$3
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> reductions.ParallelParenthesesBalancing$$anonfun$4
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> reductions.ParallelParenthesesBalancingRunner
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> reductions.ParallelParenthesesBalancingRunner$
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> reductions.ParallelParenthesesBalancingRunner$$anonfun$1
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> reductions.ParallelParenthesesBalancingRunner$$anonfun$2
+used names:
+323 items
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> $anon
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> <byname>
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> <init>
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> A
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> AnyRef
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> B
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> C
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> D
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> DefaultTaskScheduler
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> DynamicVariable
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> ForkJoinPool
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> ForkJoinTask
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> RecursiveTask
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> T
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> TaskScheduler
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> Thread
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> Tuple2
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> Tuple4
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> _root_
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> body
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> common
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> concurrent
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> currentThread
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> execute
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> fork
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> forkJoinPool
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> isInstanceOf
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> java
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> join
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> lang
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> left
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> package
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> parallel
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> right
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> scala
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> schedule
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> scheduler
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> t
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> ta
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> task
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> taskA
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> taskB
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> taskC
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> taskD
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> tb
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> tc
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> td
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> util
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> value
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> %
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> &&
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> *
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> +
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> -
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> ->
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> /
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> <
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> <=
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> <init>
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> ==
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> >
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> AbstractFunction2
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> AbstractFunction3
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> AnyRef
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> Array
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> ClassTag
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> Default
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> Float
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> IndexedSeq
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> Int
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> Key
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> Leaf
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> LineOfSight
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> LineOfSightRunner
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> Node
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> None
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> Predef
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> Product
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> ScalaRunTime
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> Serializable
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> Statics
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> String
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> StringContext
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> Tree
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> Unit
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> Warmer
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> _1
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> _2
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> _hashCode
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> _toString
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> a
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> angle
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> annotation
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> apply
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> asInstanceOf
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> b
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> benchRuns
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> canBuildFrom
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> common
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> config
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> currMax
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> currpos
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> downsweep
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> downsweepSequential
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> end
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> eq
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> exec
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> finalizeHash
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> floatHash
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> from
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> helper
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> i
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> immutable
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> input
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> intWrapper
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> isInstanceOf
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> left
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> length
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> lineOfSight
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> map
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> materializeClassTag
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> max
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> maxPrevious
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> maxWarmupRuns
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> measure
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> mid
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> minWarmupRuns
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> mix
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> mx
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> ne
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> org
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> output
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> package
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> parLineOfSight
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> parallel
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> partime
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> println
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> reductions
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> right
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> runtime
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> s
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> scala
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> scalameter
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> seqtime
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> standardConfig
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> startingAngle
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> tailrec
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> threshold
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> toArray
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> toString
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> trav
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> tree
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> typedProductIterator
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> unchecked
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> until
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> update
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> upsweep
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> upsweepSequential
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> verbose
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> withWarmer
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> x
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> y
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> ||
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> *
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> +
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> -
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> ->
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> /
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> <
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> <=
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> <init>
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> ==
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> >=
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> AnyRef
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> Array
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> Boolean
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> Default
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> Function2
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> Int
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> Key
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> List
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> ParallelCountChange
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> ParallelCountChangeRunner
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> Predef
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> String
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> StringContext
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> Threshold
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> Unit
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> Warmer
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> _1
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> _2
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> _root_
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> allCoins
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> amount
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> apply
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> benchRuns
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> coins
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> combinedThreshold
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> common
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> config
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> countChange
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> exec
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> fjtime
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> head
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> immutable
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> isEmpty
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> l
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> length
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> list
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> maxWarmupRuns
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> measure
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> measureParallelCountChange
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> minWarmupRuns
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> money
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> moneyThreshold
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> ne
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> org
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> package
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> parCountChange
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> parResult
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> parResult_=
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> parallel
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> println
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> r
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> reductions
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> s
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> scala
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> scalameter
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> seqResult
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> seqResult_=
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> seqtime
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> standardConfig
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> startingMoney
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> tail
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> threshold
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> totalCoins
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> totalCoinsThreshold
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> unchecked
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> verbose
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> withWarmer
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> ||
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> +
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> -
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> ->
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> /
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> <
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> <=
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> <init>
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> ==
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> >
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> AnyRef
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> Array
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> Boolean
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> Char
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> Default
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> Int
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> Key
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> Math
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> ParallelParenthesesBalancing
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> ParallelParenthesesBalancingRunner
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> Predef
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> String
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> StringContext
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> Tuple2
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> Unit
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> Warmer
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> _1
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> _2
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> acc
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> annotation
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> arg1
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> arg2
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> balance
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> benchRuns
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> charArrayOps
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> chars
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> common
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> config
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> exec
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> fjtime
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> from
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> head
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> helper
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> idx
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> in_chars
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> isEmpty
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> java
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> l
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> lang
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> length
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> m
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> maxWarmupRuns
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> measure
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> mid
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> min
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> minWarmupRuns
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> ne
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> org
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> package
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> parBalance
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> parResult
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> parResult_=
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> parallel
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> println
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> r
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> reduce
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> reductions
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> s
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> scala
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> scalameter
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> seqResult
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> seqResult_=
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> seqtime
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> slice
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> standardConfig
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> tail
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> threshold
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> traverse
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> unchecked
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> until
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> verbose
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> withWarmer
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> ||
+product stamps:
+40 items
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/common/package$.class -> lastModified(1475882398000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/common/package$DefaultTaskScheduler$$anon$1.class -> lastModified(1475882398000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/common/package$DefaultTaskScheduler.class -> lastModified(1475882398000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/common/package$TaskScheduler.class -> lastModified(1475882398000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/common/package.class -> lastModified(1475882398000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$$anonfun$4.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$$anonfun$5.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$$anonfun$downsweep$1.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$$anonfun$downsweep$2.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$Leaf$.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$Leaf.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$Node$.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$Node.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight$Tree.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSight.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSightRunner$$anonfun$1.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSightRunner$$anonfun$2.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSightRunner$$anonfun$3.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSightRunner$.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/LineOfSightRunner.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChange$$anonfun$3.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChange$$anonfun$4.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChange$$anonfun$combinedThreshold$1.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChange$$anonfun$moneyThreshold$1.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChange$$anonfun$totalCoinsThreshold$1.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChange$.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChange.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChangeRunner$$anonfun$1.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChangeRunner$$anonfun$2.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChangeRunner$.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelCountChangeRunner.class -> lastModified(1475882772000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancing$$anonfun$3.class -> lastModified(1475882398000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancing$$anonfun$4.class -> lastModified(1475882398000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancing$.class -> lastModified(1475882398000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancing.class -> lastModified(1475882398000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancingRunner$$anonfun$1.class -> lastModified(1475882398000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancingRunner$$anonfun$2.class -> lastModified(1475882398000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancingRunner$.class -> lastModified(1475882398000)
+/Users/Granium/Downloads/reductions/target/scala-2.11/classes/reductions/ParallelParenthesesBalancingRunner.class -> lastModified(1475882398000)
+source stamps:
+4 items
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> hash(19ffe96b09c84ba566e866c51bacad3b301b2c11)
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> hash(429da384398deb1faae86671c49b0c9e17002969)
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> hash(15e8ab43a080a8677457f60d1a98ab7e9b8b5600)
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> hash(008fee9c1154976bb66a2d75661f65861762a463)
+binary stamps:
+3 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar -> lastModified(1459485740000)
+/Users/Granium/.ivy2/cache/com.storm-enroute/scalameter-core_2.11/jars/scalameter-core_2.11-0.6.jar -> lastModified(1405518600000)
+/Users/Granium/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar -> lastModified(1438617791000)
+class names:
+3 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar -> java.lang.Object
+/Users/Granium/.ivy2/cache/com.storm-enroute/scalameter-core_2.11/jars/scalameter-core_2.11-0.6.jar -> org.scalameter.Keys
+/Users/Granium/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar -> scala.collection.IterableLike
+internal apis:
+4 items
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHD5Iuw4AHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAHHNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cOuOulp0AAZub3RpZnlzcQB+AAyE/M00dAAHcGFja2FnZXNxAH4ADOtHZZZ0AAR3YWl0c3EAfgAMRRH71nQABHRhc2tzcQB+AAxXWlWZdAANJGFzSW5zdGFuY2VPZnNxAH4ADO2zU1l0ABREZWZhdWx0VGFza1NjaGVkdWxlcnNxAH4ADP6VKW10AAZlcXVhbHNzcQB+AAxOPK7rdAAMYXNJbnN0YW5jZU9mc3EAfgAMR3fdZXQADHN5bmNocm9uaXplZHNxAH4ADASe78N0AA0kaXNJbnN0YW5jZU9mc3EAfgAM1gofX3QADGZvcmtKb2luUG9vbHNxAH4ADDVHpFR0AAlub3RpZnlBbGxzcQB+AAxy8qMidAAMaXNJbnN0YW5jZU9mc3EAfgAMTzralnQABjxpbml0PnNxAH4ADEIjdRB0AAlzY2hlZHVsZXJzcQB+AAx/Gy7OdAACPT1zcQB+AAw1EAMXdAANVGFza1NjaGVkdWxlcnNxAH4ADBy51Ep0AAVjbG9uZXNxAH4ADMH/LC90AAhzY2hlZHVsZXNxAH4ADMkZjUp0AAh0b1N0cmluZ3NxAH4ADPulSr90AAIhPXNxAH4ADIlgsA10AAhnZXRDbGFzc3NxAH4ADNkzMG10AAJuZXNxAH4ADGJTK1N0AAJlcXNxAH4ADJ/2SB10AAhwYXJhbGxlbHNxAH4ADGDsJSJ0AAIjI3NxAH4ADMhysS90AAhmaW5hbGl6ZXNxAH4ADBNirm10AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AE94cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc8cREyFpnNwkAgABQgAFZmxhZ3N4cAB0AA5jb21tb24ucGFja2FnZXVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgATeHNidGkuU2FmZUxhenkkSW1wbFACLpOXl0A/AgADWgAIYml0bWFwJDBMAAJfdHQAEkxqYXZhL2xhbmcvT2JqZWN0O0wABGV2YWx0ABFMc2NhbGEvRnVuY3Rpb24wO3hyABZ4c2J0aS5hcGkuQWJzdHJhY3RMYXp503e1AV+756ACAAB4cABwc3IAIHhzYnRpLlNhZmVMYXp5JCRhbm9uZnVuJHN0cmljdCQxAAAAAAAAAAACAAFMAAd2YWx1ZSQxcQB+AGh4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBzcQB+AGcBc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AE9MAAlpbmhlcml0ZWRxAH4AT0wAB3BhcmVudHNxAH4AT3hxAH4AcHNxAH4AZwF1cQB+AEoAAAAAcHNxAH4AZwF1cQB+AEoAAAAAcHNxAH4AZwF1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAAnNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+AG90AAZPYmplY3RzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AG9zcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAANzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgANeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABGphdmFzcQB+AIh0AARsYW5nc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AIlzcQB+AHx0AANBbnlzcQB+AIBzcQB+AIN1cQB+AIYAAAACc3EAfgCIdAAFc2NhbGFxAH4Aj3BwdXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAAFzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAAGY29tbW9uc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFXoXIXEXVyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0AD0vVXNlcnMvR3Jhbml1bS9Eb3dubG9hZHMvcmVkdWN0aW9ucy90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUGf/pawnIS6Vm6GbFG6ytOzAbLBE=
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHDBgrexAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAANXNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAEGCCh0AAZub3RpZnlzcQB+AAxwoE7udAAHdW5hcHBseXNxAH4ADAZwAcl0AAdjdXJyaWVkc3EAfgAM+gKVgXQAB3Vwc3dlZXBzcQB+AAxaosT6dAAEd2FpdHNxAH4ADCdNzt50AA5jb3B5JGRlZmF1bHQkMnNxAH4ADJlup/90AA0kYXNJbnN0YW5jZU9mc3EAfgAMWsB1SXQADHByb2R1Y3RBcml0eXNxAH4ADBgGVPt0AAZlcXVhbHNzcQB+AAwZ8pNMdAAMYXNJbnN0YW5jZU9mc3EAfgAMOJfLHnQADHN5bmNocm9uaXplZHNxAH4ADGa4jbV0AARsZWZ0c3EAfgAMmUwDTXQABFRyZWVzcQB+AAwarW3hdAANJGlzSW5zdGFuY2VPZnNxAH4ADMZDP/B0AAROb2Rlc3EAfgAM8QU+bHQAEUxpbmVPZlNpZ2h0UnVubmVyc3EAfgAMKMf3LnQABnR1cGxlZHNxAH4ADM/krnt0ABF1cHN3ZWVwU2VxdWVudGlhbHNxAH4ADFE7t490AAtsaW5lT2ZTaWdodHNxAH4ADAAhY5V0AAhjYW5FcXVhbHNxAH4ADEBmMux0AARtYWluc3EAfgAMyNnj1nQABExlYWZzcQB+AAwHtBdmdAANcHJvZHVjdFByZWZpeHNxAH4ADII2koZ0AAV1bnRpbHNxAH4ADNOxcX50AAlub3RpZnlBbGxzcQB+AAx/d279dAALcmVhZFJlc29sdmVzcQB+AAxwbebPdAAMaXNJbnN0YW5jZU9mc3EAfgAMch+NPHQAE2Rvd25zd2VlcFNlcXVlbnRpYWxzcQB+AAyCql4IdAAJZG93bnN3ZWVwc3EAfgAM/FTjVHQABjxpbml0PnNxAH4ADN3Jcp90AANtYXhzcQB+AAxlF8o7dAAOcGFyTGluZU9mU2lnaHRzcQB+AAyIzTbCdAAFYXBwbHlzcQB+AAzf/LQndAACPT1zcQB+AAzprS6GdAAFY2xvbmVzcQB+AAzGrZ8BdAAEZnJvbXNxAH4ADCKlVyF0AA5jb3B5JGRlZmF1bHQkM3NxAH4ADAhqrdp0AARjb3B5c3EAfgAMeVTZVXQACHRvU3RyaW5nc3EAfgAMv/IC9nQADnN0YW5kYXJkQ29uZmlnc3EAfgAM73h6NnQAAiE9c3EAfgAMIcEeLXQAC0xpbmVPZlNpZ2h0c3EAfgAMrT30f3QACGdldENsYXNzc3EAfgAMbiNoW3QADmNvcHkkZGVmYXVsdCQxc3EAfgAMy82q3HQAAm5lc3EAfgAMRg4b83QAAmVxc3EAfgAM2GC2YnQAD3Byb2R1Y3RJdGVyYXRvcnNxAH4ADHzYjux0AAVyaWdodHNxAH4ADCwbJa10AAIjI3NxAH4ADBtvnYZ0AAhmaW5hbGl6ZXNxAH4ADE2fpkZ0AA5wcm9kdWN0RWxlbWVudHNxAH4ADH7jZQF0AAhoYXNoQ29kZXNxAH4ADBxt4hZ0AAttYXhQcmV2aW91c3NyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAJzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AIF4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc8cREyFpnNwkAgABQgAFZmxhZ3N4cAB0ABxyZWR1Y3Rpb25zLkxpbmVPZlNpZ2h0UnVubmVydXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyABN4c2J0aS5TYWZlTGF6eSRJbXBsUAIuk5eXQD8CAANaAAhiaXRtYXAkMEwAAl90dAASTGphdmEvbGFuZy9PYmplY3Q7TAAEZXZhbHQAEUxzY2FsYS9GdW5jdGlvbjA7eHIAFnhzYnRpLmFwaS5BYnN0cmFjdExhennTd7UBX7vnoAIAAHhwAXNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBwc3EAfgCZAXNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgCBTAAJaW5oZXJpdGVkcQB+AIFMAAdwYXJlbnRzcQB+AIF4cQB+AKBzcQB+AJkBdXEAfgB8AAAAAXNyAA14c2J0aS5hcGkuRGVmUr6f4ny0NmkCAAJMAApyZXR1cm5UeXBldAAQTHhzYnRpL2FwaS9UeXBlO1sAD3ZhbHVlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1BhcmFtZXRlckxpc3Q7eHEAfgCCcQB+AIt1cQB+AIwAAAAAc3EAfgCOAHEAfgA3dXEAfgCRAAAAAHNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+AJ90AARVbml0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgCfc3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAACc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AAVzY2FsYXNyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgC7dXIAGltMeHNidGkuYXBpLlBhcmFtZXRlckxpc3Q79dM6HfKzcO4CAAB4cAAAAAFzcgAXeHNidGkuYXBpLlBhcmFtZXRlckxpc3TWxbwcZEl04wIAAloACmlzSW1wbGljaXRbAApwYXJhbWV0ZXJzdAAcW0x4c2J0aS9hcGkvTWV0aG9kUGFyYW1ldGVyO3hwAHVyABxbTHhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXI7z7jFXaXdtW0CAAB4cAAAAAFzcgAZeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlch9FrhfTSbDqAgAEWgAKaGFzRGVmYXVsdEwACG1vZGlmaWVydAAdTHhzYnRpL2FwaS9QYXJhbWV0ZXJNb2RpZmllcjtMAARuYW1lcQB+AA1MAAN0cGVxAH4AqHhwAH5yABt4c2J0aS5hcGkuUGFyYW1ldGVyTW9kaWZpZXIAAAAAAAAAABIAAHhxAH4AlHQABVBsYWludAAEYXJnc3NyABd4c2J0aS5hcGkuUGFyYW1ldGVyaXplZBZs7mkDybt/AgACTAAIYmFzZVR5cGVxAH4Ar1sADXR5cGVBcmd1bWVudHN0ABFbTHhzYnRpL2FwaS9UeXBlO3hxAH4An3NxAH4ArnQABUFycmF5cQB+ALR1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAAXNxAH4ArnQABlN0cmluZ3NxAH4AsnNxAH4AtXVxAH4AuAAAAANzcQB+ALp0AARqYXZhc3EAfgC6dAAEbGFuZ3EAfgC/cHNxAH4AmQF1cQB+AHwAAAAAcHNxAH4AmQF1cQB+ANMAAAACc3EAfgCudAAGT2JqZWN0cQB+ANdzcQB+AK50AANBbnlxAH4AtHBwc3EAfgB+cQB+AIt1cQB+AIwAAAAAc3EAfgCOAHQAFnJlZHVjdGlvbnMuTGluZU9mU2lnaHR1cQB+AJEAAAAAcQB+AJV1cQB+AJcAAAAAc3EAfgCZAXEAfgChcHNxAH4AmQFzcQB+AKNzcQB+AJkBdXEAfgB8AAAAAHBzcQB+AJkBdXEAfgB8AAAAAHBzcQB+AJkBdXEAfgDTAAAAAnNxAH4ArnEAfgDjc3EAfgCyc3EAfgC1dXEAfgC4AAAAA3NxAH4AunEAfgDbc3EAfgC6cQB+AN1xAH4Av3NxAH4ArnEAfgDlc3EAfgCyc3EAfgC1dXEAfgC4AAAAAnNxAH4AunEAfgC9cQB+AL9wcHVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAABc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHQACnJlZHVjdGlvbnNzcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVehd95ndXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQAPS9Vc2Vycy9HcmFuaXVtL0Rvd25sb2Fkcy9yZWR1Y3Rpb25zL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABRCnaOEOY3rH6roZnHEmwyeFwApaQ==
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHBPxI7WAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAH3NyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAeBUTJ0AAZub3RpZnlzcQB+AAwMgrVgdAAJVGhyZXNob2xkc3EAfgAMVIVnjHQABHdhaXRzcQB+AAxJxwOZdAAZUGFyYWxsZWxDb3VudENoYW5nZVJ1bm5lcnNxAH4ADDRBrBx0AA0kYXNJbnN0YW5jZU9mc3EAfgAMcWpKvHQABmVxdWFsc3NxAH4ADKw+kql0ABFjb21iaW5lZFRocmVzaG9sZHNxAH4ADGO1DJd0AA5tb25leVRocmVzaG9sZHNxAH4ADP0GZ/t0AAxhc0luc3RhbmNlT2ZzcQB+AAxmpChDdAAMc3luY2hyb25pemVkc3EAfgAMOOD1u3QACXBhclJlc3VsdHNxAH4ADBRbLIR0AA0kaXNJbnN0YW5jZU9mc3EAfgAMgt9Um3QAE1BhcmFsbGVsQ291bnRDaGFuZ2VzcQB+AAytqe7pdAAEbWFpbnNxAH4ADDiLVoJ0AAlub3RpZnlBbGxzcQB+AAxp6q02dAAMaXNJbnN0YW5jZU9mc3EAfgAMRAoO/nQAAj09c3EAfgAM8BQO3nQABWNsb25lc3EAfgAMA2JEtXQACHRvU3RyaW5nc3EAfgAM3mNE0HQADnN0YW5kYXJkQ29uZmlnc3EAfgAMVHwG43QAAiE9c3EAfgAMJ1eMRXQACGdldENsYXNzc3EAfgAMGT9OdHQACXNlcVJlc3VsdHNxAH4ADCQXzrt0AAtjb3VudENoYW5nZXNxAH4ADAYGy810AAJuZXNxAH4ADNptos50ABN0b3RhbENvaW5zVGhyZXNob2xkc3EAfgAMWpL6dnQADnBhckNvdW50Q2hhbmdlc3EAfgAM/XeDT3QAAmVxc3EAfgAMpQUbYXQAAiMjc3EAfgAM2o+iu3QACGZpbmFsaXplc3EAfgAMJ69l33QACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAnNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AVXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AA14cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzxxETIWmc3CQCAAFCAAVmbGFnc3hwAHQAJHJlZHVjdGlvbnMuUGFyYWxsZWxDb3VudENoYW5nZVJ1bm5lcnVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgATeHNidGkuU2FmZUxhenkkSW1wbFACLpOXl0A/AgADWgAIYml0bWFwJDBMAAJfdHQAEkxqYXZhL2xhbmcvT2JqZWN0O0wABGV2YWx0ABFMc2NhbGEvRnVuY3Rpb24wO3hyABZ4c2J0aS5hcGkuQWJzdHJhY3RMYXp503e1AV+756ACAAB4cAFzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwcHNxAH4AbQFzcgATeHNidGkuYXBpLlN0cnVjdHVyZamq+YCTb9gAAgADTAAIZGVjbGFyZWRxAH4AVUwACWluaGVyaXRlZHEAfgBVTAAHcGFyZW50c3EAfgBVeHEAfgB0c3EAfgBtAXVxAH4AUAAAAAFzcgANeHNidGkuYXBpLkRlZlK+n+J8tDZpAgACTAAKcmV0dXJuVHlwZXQAEEx4c2J0aS9hcGkvVHlwZTtbAA92YWx1ZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9QYXJhbWV0ZXJMaXN0O3hxAH4AVnEAfgBfdXEAfgBgAAAAAHNxAH4AYgBxAH4AKXVxAH4AZQAAAABzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBzdAAEVW5pdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4Ac3NyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4Aj3VyABpbTHhzYnRpLmFwaS5QYXJhbWV0ZXJMaXN0O/XTOh3ys3DuAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJMaXN01sW8HGRJdOMCAAJaAAppc0ltcGxpY2l0WwAKcGFyYW1ldGVyc3QAHFtMeHNidGkvYXBpL01ldGhvZFBhcmFtZXRlcjt4cAB1cgAcW0x4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyO8+4xV2l3bVtAgAAeHAAAAABc3IAGXhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXIfRa4X00mw6gIABFoACmhhc0RlZmF1bHRMAAhtb2RpZmllcnQAHUx4c2J0aS9hcGkvUGFyYW1ldGVyTW9kaWZpZXI7TAAEbmFtZXEAfgANTAADdHBlcQB+AHx4cAB+cgAbeHNidGkuYXBpLlBhcmFtZXRlck1vZGlmaWVyAAAAAAAAAAASAAB4cQB+AGh0AAVQbGFpbnQABGFyZ3NzcgAXeHNidGkuYXBpLlBhcmFtZXRlcml6ZWQWbO5pA8m7fwIAAkwACGJhc2VUeXBlcQB+AINbAA10eXBlQXJndW1lbnRzdAARW0x4c2J0aS9hcGkvVHlwZTt4cQB+AHNzcQB+AIJ0AAVBcnJheXEAfgCIdXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAFzcQB+AIJ0AAZTdHJpbmdzcQB+AIZzcQB+AIl1cQB+AIwAAAADc3EAfgCOdAAEamF2YXNxAH4AjnQABGxhbmdxAH4Ak3BzcQB+AG0BdXEAfgBQAAAAAHBzcQB+AG0BdXEAfgCnAAAAAnNxAH4AgnQABk9iamVjdHEAfgCrc3EAfgCCdAADQW55cQB+AIhwcHNxAH4AUnEAfgBfdXEAfgBgAAAAAHNxAH4AYgB0AB5yZWR1Y3Rpb25zLlBhcmFsbGVsQ291bnRDaGFuZ2V1cQB+AGUAAAAAcQB+AGl1cQB+AGsAAAAAc3EAfgBtAXEAfgB1cHNxAH4AbQFzcQB+AHdzcQB+AG0BdXEAfgBQAAAAAHBzcQB+AG0BdXEAfgBQAAAAAHBzcQB+AG0BdXEAfgCnAAAAAnNxAH4AgnEAfgC3c3EAfgCGc3EAfgCJdXEAfgCMAAAAA3NxAH4AjnEAfgCvc3EAfgCOcQB+ALFxAH4Ak3NxAH4AgnEAfgC5c3EAfgCGc3EAfgCJdXEAfgCMAAAAAnNxAH4AjnEAfgCRcQB+AJNwcHVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAABc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHQACnJlZHVjdGlvbnNzcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAVehd95ndXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgANTAAPc291cmNlRGlyZWN0b3J5cQB+AA14cHQAPS9Vc2Vycy9HcmFuaXVtL0Rvd25sb2Fkcy9yZWR1Y3Rpb25zL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABQV6KtDoICoZ3RX9g0amKt+m4tWAA==
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHAv4qxXAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAG3NyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cInq0JF0AAZub3RpZnlzcQB+AAyPQS1adAAEd2FpdHNxAH4ADHzrfCp0AA0kYXNJbnN0YW5jZU9mc3EAfgAMGqSoGHQABmVxdWFsc3NxAH4ADIxXrtd0AAxhc0luc3RhbmNlT2ZzcQB+AAxN3v4TdAAMc3luY2hyb25pemVkc3EAfgAM+QMvUnQACXBhclJlc3VsdHNxAH4ADNlRE4J0AA0kaXNJbnN0YW5jZU9mc3EAfgAMcp33wXQACnBhckJhbGFuY2VzcQB+AAzv7mmrdAAHYmFsYW5jZXNxAH4ADCvSvOF0AARtYWluc3EAfgAMR6amLHQACW5vdGlmeUFsbHNxAH4ADBDfvod0AAxpc0luc3RhbmNlT2ZzcQB+AAxhBDpjdAACPT1zcQB+AAyEOgwpdAAFY2xvbmVzcQB+AAyPFYW/dAAiUGFyYWxsZWxQYXJlbnRoZXNlc0JhbGFuY2luZ1J1bm5lcnNxAH4ADIOTcMF0AAh0b1N0cmluZ3NxAH4ADJOl2XJ0AA5zdGFuZGFyZENvbmZpZ3NxAH4ADDr9sv10AAIhPXNxAH4ADG/MgFF0AAhnZXRDbGFzc3NxAH4ADK6jVih0AAlzZXFSZXN1bHRzcQB+AAzs8uV2dAACbmVzcQB+AAwi1zhVdAACZXFzcQB+AAxzYPaDdAACIyNzcQB+AAyFu2cjdAAIZmluYWxpemVzcQB+AAyuxBFcdAAIaGFzaENvZGVzcQB+AAwucOwMdAAcUGFyYWxsZWxQYXJlbnRoZXNlc0JhbGFuY2luZ3NyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAJzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AE14cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc8cREyFpnNwkAgABQgAFZmxhZ3N4cAB0AC1yZWR1Y3Rpb25zLlBhcmFsbGVsUGFyZW50aGVzZXNCYWxhbmNpbmdSdW5uZXJ1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAZNb2R1bGV1cgATW0xqYXZhLmxhbmcuU3RyaW5nO63SVufpHXtHAgAAeHAAAAAAc3IAE3hzYnRpLlNhZmVMYXp5JEltcGxQAi6Tl5dAPwIAA1oACGJpdG1hcCQwTAACX3R0ABJMamF2YS9sYW5nL09iamVjdDtMAARldmFsdAARTHNjYWxhL0Z1bmN0aW9uMDt4cgAWeHNidGkuYXBpLkFic3RyYWN0TGF6edN3tQFfu+egAgAAeHAAcHNyACB4c2J0aS5TYWZlTGF6eSQkYW5vbmZ1biRzdHJpY3QkMQAAAAAAAAAAAgABTAAHdmFsdWUkMXEAfgBmeHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgBlAXNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBNTAAJaW5oZXJpdGVkcQB+AE1MAAdwYXJlbnRzcQB+AE14cQB+AG5zcQB+AGUBdXEAfgBIAAAAAXNyAA14c2J0aS5hcGkuRGVmUr6f4ny0NmkCAAJMAApyZXR1cm5UeXBldAAQTHhzYnRpL2FwaS9UeXBlO1sAD3ZhbHVlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1BhcmFtZXRlckxpc3Q7eHEAfgBOcQB+AFd1cQB+AFgAAAAAc3EAfgBaAHEAfgAjdXEAfgBdAAAAAHNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+AG10AARVbml0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgBtc3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAACc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4ADXhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AAVzY2FsYXNyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgCJdXIAGltMeHNidGkuYXBpLlBhcmFtZXRlckxpc3Q79dM6HfKzcO4CAAB4cAAAAAFzcgAXeHNidGkuYXBpLlBhcmFtZXRlckxpc3TWxbwcZEl04wIAAloACmlzSW1wbGljaXRbAApwYXJhbWV0ZXJzdAAcW0x4c2J0aS9hcGkvTWV0aG9kUGFyYW1ldGVyO3hwAHVyABxbTHhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXI7z7jFXaXdtW0CAAB4cAAAAAFzcgAZeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlch9FrhfTSbDqAgAEWgAKaGFzRGVmYXVsdEwACG1vZGlmaWVydAAdTHhzYnRpL2FwaS9QYXJhbWV0ZXJNb2RpZmllcjtMAARuYW1lcQB+AA1MAAN0cGVxAH4AdnhwAH5yABt4c2J0aS5hcGkuUGFyYW1ldGVyTW9kaWZpZXIAAAAAAAAAABIAAHhxAH4AYHQABVBsYWludAAEYXJnc3NyABd4c2J0aS5hcGkuUGFyYW1ldGVyaXplZBZs7mkDybt/AgACTAAIYmFzZVR5cGVxAH4AfVsADXR5cGVBcmd1bWVudHN0ABFbTHhzYnRpL2FwaS9UeXBlO3hxAH4AbXNxAH4AfHQABUFycmF5cQB+AIJ1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAAXNxAH4AfHQABlN0cmluZ3NxAH4AgHNxAH4Ag3VxAH4AhgAAAANzcQB+AIh0AARqYXZhc3EAfgCIdAAEbGFuZ3EAfgCNcHNxAH4AZQF1cQB+AEgAAAAAcHNxAH4AZQF1cQB+AKEAAAACc3EAfgB8dAAGT2JqZWN0cQB+AKVzcQB+AHx0AANBbnlxAH4AgnBwc3EAfgBKcQB+AFd1cQB+AFgAAAAAc3EAfgBaAHQAJ3JlZHVjdGlvbnMuUGFyYWxsZWxQYXJlbnRoZXNlc0JhbGFuY2luZ3VxAH4AXQAAAABxAH4AYXVxAH4AYwAAAABzcQB+AGUAcHNxAH4AanEAfgBvc3EAfgBlAXNxAH4AcXNxAH4AZQF1cQB+AEgAAAAAcHNxAH4AZQF1cQB+AEgAAAAAcHNxAH4AZQF1cQB+AKEAAAACc3EAfgB8cQB+ALFzcQB+AIBzcQB+AIN1cQB+AIYAAAADc3EAfgCIcQB+AKlzcQB+AIhxAH4Aq3EAfgCNc3EAfgB8cQB+ALNzcQB+AIBzcQB+AIN1cQB+AIYAAAACc3EAfgCIcQB+AItxAH4AjXBwdXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAAFzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAAKcmVkdWN0aW9uc3NyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABV6FyFxF1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AA1MAA9zb3VyY2VEaXJlY3RvcnlxAH4ADXhwdAA9L1VzZXJzL0dyYW5pdW0vRG93bmxvYWRzL3JlZHVjdGlvbnMvdGFyZ2V0L3NjYWxhLTIuMTEvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFACP7pwRVJdrtmotdWYfZYYXYqRj
+external apis:
+0 items
+source infos:
+4 items
+/Users/Granium/Downloads/reductions/src/main/scala/common/package.scala -> 
+AAAAAAAAAAA=
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/LineOfSight.scala -> 
+AAAAAAAAAAA=
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelCountChange.scala -> 
+AAAAAAAAAAA=
+/Users/Granium/Downloads/reductions/src/main/scala/reductions/ParallelParenthesesBalancing.scala -> 
+AAAAAAAAAAA=
+compilations:
+2 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABV6FyFxF1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPS9Vc2Vycy9HcmFuaXVtL0Rvd25sb2Fkcy9yZWR1Y3Rpb25zL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv
+1 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABV6F33md1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAPS9Vc2Vycy9HcmFuaXVtL0Rvd25sb2Fkcy9yZWR1Y3Rpb25zL3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEv

@@ -1,0 +1,9 @@
+submit granium90@gmail.com 1ZDxWLbvrntXOHnh
+submit granium90@gmail.com  test("union contains all elements of each set") {
+    new TestSets {
+      val s = union(s1, s2)
+      assert(contains(s, 1), "Union 1")
+      assert(contains(s, 2), "Union 2")
+      assert(!contains(s, 3), "Union 3")
+    }
+submit granium90@gmail.com 1ZDxWLbvrntXOHnh

@@ -1,0 +1,248 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes
+compile options:
+1 items
+0 -> -deprecation
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.11.7
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+20 items
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$1.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$2.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$3.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$4.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$5.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$6.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$7.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$8.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$9$$anonfun$10.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$9.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$DoubleOps$.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$DoubleOps.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$FloatOps$.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$FloatOps.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$FloatSequenceOps$$anonfun$$tilde$eq$extension$1.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$FloatSequenceOps$.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$FloatSequenceOps.class
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps.class
+binary dependencies:
+4 items
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/.ivy2/cache/junit/junit/jars/junit-4.10.jar
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> /Users/Granium/.ivy2/cache/org.scalatest/scalatest_2.11/bundles/scalatest_2.11-2.2.4.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+2 items
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.conctrees.ConcBuffer
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.package$
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+20 items
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.BarnesHutSuite
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.BarnesHutSuite$$anonfun$1
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.BarnesHutSuite$$anonfun$2
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.BarnesHutSuite$$anonfun$3
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.BarnesHutSuite$$anonfun$4
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.BarnesHutSuite$$anonfun$5
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.BarnesHutSuite$$anonfun$6
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.BarnesHutSuite$$anonfun$7
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.BarnesHutSuite$$anonfun$8
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.BarnesHutSuite$$anonfun$9
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.BarnesHutSuite$$anonfun$9$$anonfun$10
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.FloatOps
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.FloatOps$
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.FloatOps$DoubleOps
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.FloatOps$DoubleOps$
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.FloatOps$FloatOps
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.FloatOps$FloatOps$
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.FloatOps$FloatSequenceOps
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.FloatOps$FloatSequenceOps$
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut.FloatOps$FloatSequenceOps$$anonfun$$tilde$eq$extension$1
+used names:
+103 items
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> $org_scalatest_assert_macro_expr
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> $org_scalatest_assert_macro_left
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> $org_scalatest_assert_macro_right
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> $this
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> &&
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> +=
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> -
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> <
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> <init>
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> ==
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> AnyRef
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> AnyVal
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> BarnesHutSuite
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> Body
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> Bool
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> Boolean
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> Boundaries
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> ConcBuffer
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> Double
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> DoubleOps
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> Float
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> FloatOps
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> FloatSequenceOps
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> FunSuite
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> JUnitRunner
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> RunWith
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> SECTOR_PRECISION
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> SectorMatrix
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> Seq
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> StringContext
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> _1
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> _2
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> a
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> abs
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> apply
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> asInstanceOf
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> assert
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> assertionsHelper
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> b
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> b1
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> b2
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> b3
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> barneshut
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> binaryMacroBool
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> bodies
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> body
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> boundaries
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> canBuildFrom
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> centerX
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> centerY
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> collection
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> common
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> conctrees
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> concurrent
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> fail
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> find
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> forall
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> hashCode
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> insert
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> inserted
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> isDefined
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> isInstanceOf
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> java
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> junit
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> macroAssert
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> mass
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> massX
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> massY
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> math
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> maxX_=
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> maxY_=
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> minX_=
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> minY_=
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> ne
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> nw
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> org
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> package
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> parallel
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> precisionThreshold
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> quad
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> res
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> runner
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> s
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> scala
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> scalactic
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> scalatest
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> se
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> self
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> simpleMacroBool
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> size
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> sm
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> sw
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> test
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> that
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> toDouble
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> total
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> updated
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> util
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> xspeed
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> yspeed
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> zip
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> ~=
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> ~=$extension
+product stamps:
+20 items
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$1.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$2.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$3.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$4.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$5.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$6.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$7.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$8.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$9$$anonfun$10.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite$$anonfun$9.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/BarnesHutSuite.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$DoubleOps$.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$DoubleOps.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$FloatOps$.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$FloatOps.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$FloatSequenceOps$$anonfun$$tilde$eq$extension$1.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$FloatSequenceOps$.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps$FloatSequenceOps.class -> lastModified(1477042512000)
+/Users/Granium/Downloads/barneshut/target/scala-2.11/test-classes/barneshut/FloatOps.class -> lastModified(1477042512000)
+source stamps:
+1 items
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> hash(decb6151e4b8a6547d1ed834616812f7b0ec6da2)
+binary stamps:
+4 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar -> lastModified(1459485740000)
+/Users/Granium/.ivy2/cache/junit/junit/jars/junit-4.10.jar -> lastModified(1317323535000)
+/Users/Granium/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar -> lastModified(1438617791000)
+/Users/Granium/.ivy2/cache/org.scalatest/scalatest_2.11/bundles/scalatest_2.11-2.2.4.jar -> lastModified(1422515700000)
+class names:
+4 items
+/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar -> java.lang.Object
+/Users/Granium/.ivy2/cache/junit/junit/jars/junit-4.10.jar -> org.junit.runner.RunWith
+/Users/Granium/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar -> scala.AnyVal
+/Users/Granium/.ivy2/cache/org.scalatest/scalatest_2.11/bundles/scalatest_2.11-2.2.4.jar -> org.scalatest.FunSuite
+internal apis:
+1 items
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHB2hygeAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAFc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hw2Ru4vXQACURvdWJsZU9wc3NxAH4ACyU4KFd0ABJjb252ZXJ0VG9FcXVhbGl6ZXJzcQB+AAuwqzaadAAQRmxvYXRTZXF1ZW5jZU9wc3NxAH4ACw0O6Yl0AAhGbG9hdE9wc3NxAH4AC/FfXb50ABV1bmNvbnN0cmFpbmVkRXF1YWxpdHl1cQB+AAkAAABwc3EAfgALjJBXMXQABmFzc2VydHNxAH4AC4h8hiN0AAZub3RpZnlzcQB+AAsHrHm6dAAmbG93UHJpb3JpdHlDb252ZXJzaW9uQ2hlY2tlZENvbnN0cmFpbnRzcQB+AAsQNyWfdAAQQXNzZXJ0aW9uc0hlbHBlcnNxAH4AC+b2Se90AAZjYW5jZWxzcQB+AAuWr8kQdAAEdGVzdHNxAH4AC6pxGs10ABFleGVjdXRlJGRlZmF1bHQkMnNxAH4AC45UMNZ0AAxleHBlY3RSZXN1bHRzcQB+AAu0kqPsdAAJaW50ZXJjZXB0c3EAfgAL8BAkmXQABGZhaWxzcQB+AAubX1rzdAAEbmFtZXNxAH4ACxOiOc90ABRhc3NlcnREb2VzTm90Q29tcGlsZXNxAH4AC5Ffj0l0ABFleGVjdXRlJGRlZmF1bHQkNHNxAH4AC0Rjr6R0AAdleGVjdXRlc3EAfgALo8GulHQABHdhaXRzcQB+AAsujCredAALdGVzdERhdGFGb3JzcQB+AAvrkcpjdAATY3JlYXRlQ2F0Y2hSZXBvcnRlcnNxAH4ACzygBA50AAlzdHlsZU5hbWVzcQB+AAubW6FcdAANJGFzSW5zdGFuY2VPZnNxAH4ACxbYLqh0ABFleGVjdXRlJGRlZmF1bHQkM3NxAH4AC89bG3p0AAljb25maWdNYXBzcQB+AAu7/DdfdAAScHJlY2lzaW9uVGhyZXNob2xkc3EAfgALOItannQACURvdWJsZU9wc3NxAH4AC/VxkEl0AAtkaWZmU3RyaW5nc3NxAH4AC4PV4JF0AAZlcXVhbHNzcQB+AAvwFbZ9dAAsY29udmVydEVxdWl2YWxlbmNlVG9BVG9CQ29udmVyc2lvbkNvbnN0cmFpbnRzcQB+AAtu0V7WdAAPZGVmYXVsdEVxdWFsaXR5c3EAfgALRoNyhHQAImNvbnZlcnRFcXVpdmFsZW5jZVRvQVRvQkNvbnN0cmFpbnRzcQB+AAsMzKDMdAAEdGFnc3NxAH4AC4FAgi50AAxhc0luc3RhbmNlT2ZzcQB+AAtOraHsdAAFYWxlcnRzcQB+AAtYJJ5ydAADcnVuc3EAfgALtmbPh3QAD0xlZ2FjeUVxdWFsaXplcnNxAH4AC5C9cH50AAZzY29wZXNzcQB+AAv1hO2sdAAYY29udmVydFRvTGVnYWN5RXF1YWxpemVyc3EAfgALdpzPJ3QADHN5bmNocm9uaXplZHNxAH4AC6OUdp50AA5hc3NlcnRDb21waWxlc3NxAH4ACyy+00F0AARzZWxmc3EAfgALaXc4bXQADSRpc0luc3RhbmNlT2ZzcQB+AAuSZzLodAAEdHJhcHNxAH4AC4FRP7B0ABV0ZXN0RGF0YUZvciRkZWZhdWx0JDJzcQB+AAuWq4qFdAAMYXNzZXJ0UmVzdWx0c3EAfgALpyUjNnQAEEZsb2F0U2VxdWVuY2VPcHNzcQB+AAssgB+gdAAOQmFybmVzSHV0U3VpdGVzcQB+AAtPFnzkdAAEdGV4dHNxAH4AC9qOTyh0ACxjb252ZXJ0RXF1aXZhbGVuY2VUb0JUb0FDb252ZXJzaW9uQ29uc3RyYWludHNxAH4ACyfNgAl0ABFleGVjdXRlJGRlZmF1bHQkN3NxAH4AC3N9q550AAJ+PXNxAH4AC6vK0lx0ABV0eXBlQ2hlY2tlZENvbnN0cmFpbnRzcQB+AAtp8c6NdAADIT09c3EAfgALzqX5BXQABGluZm9zcQB+AAuCgoxGdAAJbm90aWZ5QWxsc3EAfgALIj4E4nQAC3dpdGhGaXh0dXJlc3EAfgAL5LIqyHQAB3J1blRlc3RzcQB+AAs7gXD1dAAMaXNJbnN0YW5jZU9mc3EAfgAL3ehVrHQACHdpdGhDbHVlc3EAfgALBi/rbHQAEGFzc2VydGlvbnNIZWxwZXJzcQB+AAsdV/iZdAARZXhlY3V0ZSRkZWZhdWx0JDZzcQB+AAvFO7NRdAAPYXNzZXJ0VHlwZUVycm9yc3EAfgALWpsffnQABm1hcmt1cHNxAH4AC9I4X8N0AAhsZWZ0U2lkZXNxAH4AC2WbnBV0AAY8aW5pdD5zcQB+AAu/FFaBdAALbWFjcm9Bc3N1bWVzcQB+AAvj1TqsdAAPcnVuTmVzdGVkU3VpdGVzc3EAfgAL+3SIHnQABWFwcGx5c3EAfgAL0+8OSnQACUVxdWFsaXplcnNxAH4AC8BsP1l0ABtuZXdBc3NlcnRpb25GYWlsZWRFeGNlcHRpb25zcQB+AAsMB4w/dAAEbm90ZXNxAH4AC6fMa310AAI9PXNxAH4AC1rlIoJ0AAVjbG9uZXNxAH4AC0i2PNR0ABBlcXVhbHMkZXh0ZW5zaW9uc3EAfgALNHJnCnQABmV4cGVjdHNxAH4AC9YfCgl0AAxuZXN0ZWRTdWl0ZXNzcQB+AAtTk6ocdAAGYXNzdW1lc3EAfgALV4BjA3QACEZsb2F0T3Bzc3EAfgAL8jRKxXQAIGxvd1ByaW9yaXR5VHlwZUNoZWNrZWRDb25zdHJhaW50c3EAfgALNKcdjnQADHJlZ2lzdGVyVGVzdHNxAH4AC3BFU0d0ABFleGVjdXRlJGRlZmF1bHQkNXNxAH4AC5jER0B0AAM9PT1zcQB+AAtRBnmMdAAYbmV3VGVzdENhbmNlbGVkRXhjZXB0aW9uc3EAfgAL+zeFDnQACHRvU3RyaW5nc3EAfgALQdI1UHQACXRlc3ROYW1lc3NxAH4ACzcOe0d0ABFleGVjdXRlJGRlZmF1bHQkMXNxAH4AC6rFp6x0AAIhPXNxAH4ACynrq3l0ABdMZWdhY3lDaGVja2luZ0VxdWFsaXplcnNxAH4ACxTloJx0AAhnZXRDbGFzc3NxAH4AC7Ydr+J0ABNyZWdpc3Rlcklnbm9yZWRUZXN0c3EAfgALGI4mInQACHRlc3RzRm9yc3EAfgALDiw2unQACHJ1blRlc3Rzc3EAfgALdphdhHQAEXBlbmRpbmdVbnRpbEZpeGVkc3EAfgALc+QhqnQAEWV4cGVjdGVkVGVzdENvdW50c3EAfgALTcm8p3QACHJlcnVubmVyc3EAfgALTRp79XQAImNvbnZlcnRFcXVpdmFsZW5jZVRvQlRvQUNvbnN0cmFpbnRzcQB+AAsqceBTdAACbmVzcQB+AAsvi4/edAARQ2hlY2tpbmdFcXVhbGl6ZXJzcQB+AAtcZYFBdAAgY29udmVydFRvTGVnYWN5Q2hlY2tpbmdFcXVhbGl6ZXJzcQB+AAtOUwk/dAASaGFzaENvZGUkZXh0ZW5zaW9uc3EAfgALC07583QAB3BlbmRpbmdzcQB+AAvUSIVwdAAGaWdub3Jlc3EAfgALT8E8snQAC21hY3JvQXNzZXJ0c3EAfgAL6j4S+XQAAmVxc3EAfgALbJDLGHQAG2dldE9iamVjdHNGb3JGYWlsdXJlTWVzc2FnZXNxAH4AC1tjOkd0ABpjb252ZXJ0VG9DaGVja2luZ0VxdWFsaXplcnNxAH4AC0ou9jp0AAlOb0FyZ1Rlc3RzcQB+AAtWjvQMdAACIyNzcQB+AAusdKAkdAAIZmluYWxpemVzcQB+AAtsSOuvdAAMfj0kZXh0ZW5zaW9uc3EAfgALxijNvnQAG2NvbnZlcnNpb25DaGVja2VkQ29uc3RyYWludHNxAH4AC7vb/Lp0AAhoYXNoQ29kZXNxAH4AC/uX62R0AAdzdWl0ZUlkc3EAfgALtvPyjHQACXN1aXRlTmFtZXNxAH4AC+u4ovd0AAZhcHBlbmRzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAACc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgEBeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADHhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAABc3IAFHhzYnRpLmFwaS5Bbm5vdGF0aW9u3g6BovZcCrICAAJbAAlhcmd1bWVudHN0AB9bTHhzYnRpL2FwaS9Bbm5vdGF0aW9uQXJndW1lbnQ7TAAEYmFzZXQAEEx4c2J0aS9hcGkvVHlwZTt4cHVyAB9bTHhzYnRpLmFwaS5Bbm5vdGF0aW9uQXJndW1lbnQ7UZ2mjzglD3gCAAB4cAAAAAFzcgAceHNidGkuYXBpLkFubm90YXRpb25Bcmd1bWVudNZFsdgDGxd8AgACTAAEbmFtZXEAfgAMTAAFdmFsdWVxAH4ADHhwdAAFdmFsdWV0AChjbGFzc09mW29yZy5zY2FsYXRlc3QuanVuaXQuSlVuaXRSdW5uZXJdc3IAFHhzYnRpLmFwaS5Qcm9qZWN0aW9u89KNVOlFpC0CAAJMAAJpZHEAfgAMTAAGcHJlZml4dAAWTHhzYnRpL2FwaS9TaW1wbGVUeXBlO3hyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHQAB1J1bldpdGhzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+ARpzcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAARzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgAMeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQAA29yZ3NxAH4BJnQABWp1bml0c3EAfgEmdAAGcnVubmVyc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+ASdzcgATeHNidGkuYXBpLk1vZGlmaWVyc8cREyFpnNwkAgABQgAFZmxhZ3N4cAB0ABhiYXJuZXNodXQuQmFybmVzSHV0U3VpdGV1cgAaW0x4c2J0aS5hcGkuVHlwZVBhcmFtZXRlcjvZbSYPKJ3ytgIAAHhwAAAAAH5yABh4c2J0aS5hcGkuRGVmaW5pdGlvblR5cGUAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAhDbGFzc0RlZnVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAAJ0ACdzY2FsYS5yZWZsZWN0Lm1hY3Jvcy5pbnRlcm5hbC5tYWNyb0ltcGx0ABBzY2FsYS5kZXByZWNhdGVkc3IAE3hzYnRpLlNhZmVMYXp5JEltcGxQAi6Tl5dAPwIAA1oACGJpdG1hcCQwTAACX3R0ABJMamF2YS9sYW5nL09iamVjdDtMAARldmFsdAARTHNjYWxhL0Z1bmN0aW9uMDt4cgAWeHNidGkuYXBpLkFic3RyYWN0TGF6edN3tQFfu+egAgAAeHAAcHNyACB4c2J0aS5TYWZlTGF6eSQkYW5vbmZ1biRzdHJ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
+external apis:
+2 items
+barneshut.conctrees.ConcBuffer -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHARw7uYAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAgHNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cMVMpkV0AAp0b0l0ZXJhYmxlc3EAfgAMa1hjcHQACndpdGhGaWx0ZXJzcQB+AAzC23EydAANdG9UcmF2ZXJzYWJsZXNxAH4ADL9rzZd0AAZub3RpZnlzcQB+AAySOn9ydAAEZmluZHNxAH4ADBFw/Rt0AARzcGFuc3EAfgAMXimbDXQAB2ZsYXR0ZW5zcQB+AAyFlz96dAAIdG9CdWZmZXJzcQB+AAyz53kqdAAEY29uY3NxAH4ADMM5gGp0AAVjaHVua3NxAH4ADLhXIbJ0AAVjb3VudHNxAH4ADPdxW/l0AApDb25jQnVmZmVyc3EAfgAMcyOADnQADHJlZHVjZU9wdGlvbnNxAH4ADCWmX0t0ABNzbGljZVdpdGhLbm93bkRlbHRhc3EAfgAMrxHFHHQABHdhaXRzcQB+AAy9A+i0dAAIbGFzdFNpemVzcQB+AAxTXrJAdAAJZm9sZFJpZ2h0c3EAfgAMx5nciXQACXRha2VXaGlsZXNxAH4ADPilYmt0AAxzdHJpbmdQcmVmaXhzcQB+AAwHiCn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0AApXaXRoRmlsdGVyc3EAfgAMOKYKv3QAD2hhc0RlZmluaXRlU2l6ZXNxAH4ADCWYX4x0AAhmb2xkTGVmdHNxAH4ADIG7kqF0AAx0b0NvbGxlY3Rpb25zcQB+AAxLy0M1dAAHaXNFbXB0eXNxAH4ADDF8+Yd0AAJuZXNxAH4ADNvt3rh0AARpbml0c3EAfgAMpUVkyHQACHJldmVyc2Vkc3EAfgAMy4kPsnQAAWtzcQB+AAzZvfnQdAAKcmVkdWNlTGVmdHNxAH4ADBGVIIF0ABBDb25jQnVmZmVyUnVubmVyc3EAfgAMdu1djXQAAmVxc3EAfgAMDlHaSnQAA3N1bXNxAH4ADKEhu/N0AA50aGlzQ29sbGVjdGlvbnNxAH4ADB8uF3x0AAIjI3NxAH4ADMVkXV90AAhzY2FuTGVmdHNxAH4ADLZTZBJ0AAhmaW5hbGl6ZXNxAH4ADKt752x0AAhoYXNoQ29kZXNxAH4ADJDGCrJ0AAdwcm9kdWN0c3EAfgAMwAYzuHQABHZpZXdzcgATeHNidGkuYXBpLlNvdXJjZUFQSblep/kpIzikAgACWwALZGVmaW5pdGlvbnN0ABdbTHhzYnRpL2FwaS9EZWZpbml0aW9uO1sACHBhY2thZ2VzdAAUW0x4c2J0aS9hcGkvUGFja2FnZTt4cHVyABdbTHhzYnRpLmFwaS5EZWZpbml0aW9uO4jJXOe0414OAgAAeHAAAAACc3IAE3hzYnRpLmFwaS5DbGFzc0xpa2WDNByh37CXbAIABEwADmRlZmluaXRpb25UeXBldAAaTHhzYnRpL2FwaS9EZWZpbml0aW9uVHlwZTtbABBzYXZlZEFubm90YXRpb25zdAATW0xqYXZhL2xhbmcvU3RyaW5nO0wACHNlbGZUeXBldAAQTHhzYnRpL2FwaS9MYXp5O0wACXN0cnVjdHVyZXEAfgEXeHIAIXhzYnRpLmFwaS5QYXJhbWV0ZXJpemVkRGVmaW5pdGlvbvkRbrHVUDziAgABWwAOdHlwZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9UeXBlUGFyYW1ldGVyO3hyABR4c2J0aS5hcGkuRGVmaW5pdGlvbocqG+hxQuNGAgAETAAGYWNjZXNzdAASTHhzYnRpL2FwaS9BY2Nlc3M7WwALYW5ub3RhdGlvbnN0ABdbTHhzYnRpL2FwaS9Bbm5vdGF0aW9uO0wACW1vZGlmaWVyc3QAFUx4c2J0aS9hcGkvTW9kaWZpZXJzO0wABG5hbWVxAH4ADXhwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnPHERMhaZzcJAIAAUIABWZsYWdzeHAAdAAeYmFybmVzaHV0LmNvbmN0cmVlcy5Db25jQnVmZmVydXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAFzcgAXeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXJnaVXb43KQawIABlsAC2Fubm90YXRpb25zcQB+ARxMAAJpZHEAfgANTAAKbG93ZXJCb3VuZHQAEEx4c2J0aS9hcGkvVHlwZTtbAA50eXBlUGFyYW1ldGVyc3EAfgEZTAAKdXBwZXJCb3VuZHEAfgEqTAAIdmFyaWFuY2V0ABRMeHNidGkvYXBpL1ZhcmlhbmNlO3hwdXEAfgEiAAAAAXNyABR4c2J0aS5hcGkuQW5ub3RhdGlvbt4OgaL2XAqyAgACWwAJYXJndW1lbnRzdAAfW0x4c2J0aS9hcGkvQW5ub3RhdGlvbkFyZ3VtZW50O0wABGJhc2VxAH4BKnhwdXIAH1tMeHNidGkuYXBpLkFubm90YXRpb25Bcmd1bWVudDtRnaaPOCUPeAIAAHhwAAAAAXNyABx4c2J0aS5hcGkuQW5ub3RhdGlvbkFyZ3VtZW501kWx2AMbF3wCAAJMAARuYW1lcQB+AA1MAAV2YWx1ZXEAfgANeHB0AAB0AEUoc2NhbGEuQnl0ZSxzY2FsYS5DaGFyLHNjYWxhLkludCxzY2FsYS5Mb25nLHNjYWxhLkZsb2F0LHNjYWxhLkRvdWJsZSlzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwdAALc3BlY2lhbGl6ZWRzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+ATlzcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAAJzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgANeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABXNjYWxhc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AUZ0ACBiYXJuZXNodXQuY29uY3RyZWVzLkNvbmNCdWZmZXIuVHNxAH4BN3QAB05vdGhpbmdxAH4BP3VxAH4BJwAAAABzcQB+ATd0AANBbnlxAH4BP35yABJ4c2J0aS5hcGkuVmFyaWFuY2UAAAAAAAAAABIAAHhyAA5qYXZhLmxhbmcuRW51bQAAAAAAAAAAEgAAeHB0AAlJbnZhcmlhbnR+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cQB+AVJ0AAhDbGFzc0RlZnVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAAJ0ABpzY2FsYS5hbm5vdGF0aW9uLm1pZ3JhdGlvbnQAGnNjYWxhLmRlcHJlY2F0ZWRPdmVycmlkaW5nc3IAE3hzYnRpLlNhZmVMYXp5JEltcGxQAi6Tl5dAPwIAA1oACGJpdG1hcCQwTAACX3R0ABJMamF2YS9sYW5nL09iamVjdDtMAARldmFsdAARTHNjYWxhL0Z1bmN0aW9uMDt4cgAWeHNidGkuYXBpLkFic3RyYWN0TGF6edN3tQFfu+egAgAAeHAAcHNyACB4c2J0aS5TYWZlTGF6eSQkYW5vbmZ1biRzdHJpY3QkMQAAAAAAAAAAAgABTAAHdmFsdWUkMXEAfgFdeHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHEAfgE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
+barneshut.package$ -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHDUraPNAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAVnNyACB4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaFsO9SJ2OFfPAgACSQAEaGFzaEwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cBU1XJF0AAZ4c3BlZWRzcQB+AAxmyhvpdAAEbWluWHNxAH4ADKJZvT10AAJzZXNxAH4ADMkkV2B0AAZub3RpZnlzcQB+AAwqw6r7dAAEbWFzc3NxAH4ADPdCgpd0AAd1bmFwcGx5c3EAfgAMVYLXSnQAB2N1cnJpZWRzcQB+AAwctOzHdAABeHNxAH4ADLT8JSp0AAdwYWNrYWdlc3EAfgAM6/IS6nQABnlzcGVlZHNxAH4ADAuiSTR0ABRlbGltaW5hdGlvblRocmVzaG9sZHNxAH4ADF0AioZ0AAR3YWl0c3EAfgAMI8DsNHQABWZvcmNlc3EAfgAML8HcunQADmNvcHkkZGVmYXVsdCQyc3EAfgAMAjfdUHQADSRhc0luc3RhbmNlT2ZzcQB+AAzEnJc/dAAGYm9kaWVzc3EAfgAMwt6bbHQABHNpemVzcQB+AAx3ATEIdAAFdGltZWRzcQB+AAxNU9xidAAFbWFzc1lzcQB+AAySEU8adAAGaW5zZXJ0c3EAfgAMowK7/nQADHByb2R1Y3RBcml0eXNxAH4ADFB6NGV0AAZ0b1F1YWRzcQB+AAz2fBI/dAAGZXF1YWxzc3EAfgAMll9vN3QAAXlzcQB+AAxGqqKydAACKz1zcQB+AAzXiGwadAAFY2xlYXJzcQB+AAxHTE1FdAAMYXNJbnN0YW5jZU9mc3EAfgAMzlXo8nQABG1pbllzcQB+AAwXR76IdAAKQm91bmRhcmllc3NxAH4ADCRNSSx0AAxzeW5jaHJvbml6ZWRzcQB+AAwUXJkgdAAKYm91bmRhcmllc3NxAH4ADIaJVnF0AAVtYXNzWHNxAH4ADIjR6yR0AA0kaXNJbnN0YW5jZU9mc3EAfgAMPLCU+nQABmhlaWdodHNxAH4ADPQ4vCF0AAZ0dXBsZWRzcQB+AAzcWCg+dAAGbWF0cml4c3EAfgAMpdBvjHQACGNhbkVxdWFsc3EAfgAMRkGXsXQABFF1YWRzcQB+AAz4zUGxdAAOY29weSRkZWZhdWx0JDRzcQB+AAwvsI54dAAFdG90YWxzcQB+AAwxPnnudAAETGVhZnNxAH4ADEeqIy10AA1wcm9kdWN0UHJlZml4c3EAfgAMQlZDpXQAA2dlZXNxAH4ADPx2BRh0AARtYXhYc3EAfgAMfIFA93QACW5vdGlmeUFsbHNxAH4ADCORPHZ0AAtyZWFkUmVzb2x2ZXNxAH4ADH5a0fV0AAxpc0luc3RhbmNlT2ZzcQB+AAwSSeoPdAAPc2VjdG9yUHJlY2lzaW9uc3EAfgAM9cn4hXQADlRpbWVTdGF0aXN0aWNzc3EAfgAMGGH6SXQABjxpbml0PnNxAH4ADBmw7Ad0AARtYXhZc3EAfgAMX1aB2XQAB3VwZGF0ZWRzcQB+AAyvIX/ZdAAFYXBwbHlzcQB+AAwf5ZWKdAAFRW1wdHlzcQB+AAx4YcWKdAAHY2VudGVyWHNxAH4ADJzTYq10AAI9PXNxAH4ADABjWjd0AARCb2R5c3EAfgAMVU3ZCHQACHF1YWRMaXN0c3EAfgAMzEe4QXQABXRoZXRhc3EAfgAMKTMJTXQABWNsb25lc3EAfgAMd9oY43QACnNlY3RvclNpemVzcQB+AAzJpcktdAALbWluaW11bVNpemVzcQB+AAwsiMXDdAAFZGVsdGFzcQB+AAzCUeutdAAQU0VDVE9SX1BSRUNJU0lPTnNxAH4ADAKFzQR0AAdjb21iaW5lc3EAfgAMTBUHenQADmNvcHkkZGVmYXVsdCQzc3EAfgAMS8/DhnQABGNvcHlzcQB+AAxPFZw/dAAIdG9TdHJpbmdzcQB+AAwTXfgldAACc3dzcQB+AAxk/WqtdAAHY2VudGVyWXNxAH4ADJwdZaR0AAIhPXNxAH4ADHfFfjh0AAhnZXRDbGFzc3NxAH4ADKGGns50AAd0aW1lTWFwc3EAfgAMEChOYHQADmNvcHkkZGVmYXVsdCQxc3EAfgAM1eNX6XQAAm53c3EAfgAM2VyE83QABEZvcmtzcQB+AAw+HsGHdAACbmVzcQB+AAxADBztdAAFd2lkdGhzcQB+AAyuIBgvdAACZXFzcQB+AAzs9yNgdAAPcHJvZHVjdEl0ZXJhdG9yc3EAfgAMCBd01XQACGRpc3RhbmNlc3EAfgAM281MSHQAAiMjc3EAfgAM2FYpQ3QACGZpbmFsaXplc3EAfgAMbth0y3QADFNlY3Rvck1hdHJpeHNxAH4ADPHKjrd0AA5wcm9kdWN0RWxlbWVudHNxAH4ADNjr7bR0AAhoYXNoQ29kZXNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AMN4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc8cREyFpnNwkAgABQgAFZmxhZ3N4cAB0ABFiYXJuZXNodXQucGFja2FnZXVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgATeHNidGkuU2FmZUxhenkkSW1wbFACLpOXl0A/AgADWgAIYml0bWFwJDBMAAJfdHQAEkxqYXZhL2xhbmcvT2JqZWN0O0wABGV2YWx0ABFMc2NhbGEvRnVuY3Rpb24wO3hyABZ4c2J0aS5hcGkuQWJzdHJhY3RMYXp503e1AV+756ACAAB4cABwc3IAIHhzYnRpLlNhZmVMYXp5JCRhbm9uZnVuJHN0cmljdCQxAAAAAAAAAAACAAFMAAd2YWx1ZSQxcQB+ANx4cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBzcQB+ANsBc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AMNMAAlpbmhlcml0ZWRxAH4Aw0wAB3BhcmVudHNxAH4Aw3hxAH4A5HNxAH4A2wF1cQB+AL4AAAAAcHNxAH4A2wF1cQB+AL4AAAAAcHNxAH4A2wF1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAAnNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADUwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+AON0AAZPYmplY3RzcgATeHNidGkuYXBpLlNpbmdsZXRvbvynX/jPVuRGAgABTAAEcGF0aHQAEEx4c2J0aS9hcGkvUGF0aDt4cQB+AONzcgAOeHNidGkuYXBpLlBhdGibPVwIzqUnhAIAAVsACmNvbXBvbmVudHN0ABpbTHhzYnRpL2FwaS9QYXRoQ29tcG9uZW50O3hwdXIAGltMeHNidGkuYXBpLlBhdGhDb21wb25lbnQ7Q9oJdC1nFnQCAAB4cAAAAANzcgAMeHNidGkuYXBpLklkmDJsizdTxEACAAFMAAJpZHEAfgANeHIAF3hzYnRpLmFwaS5QYXRoQ29tcG9uZW50X5oiWy6Gn7wCAAB4cHQABGphdmFzcQB+APx0AARsYW5nc3IADnhzYnRpLmFwaS5UaGlz2wntpsxaQFwCAAB4cQB+AP1zcQB+APB0AANBbnlzcQB+APRzcQB+APd1cQB+APoAAAACc3EAfgD8dAAFc2NhbGFxAH4BA3BwdXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAAFzcgAReHNidGkuYXBpLlBhY2thZ2V+WY/2rs45WAIAAUwABG5hbWVxAH4ADXhwdAAJYmFybmVzaHV0c3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFX5pfXo3VyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4ADUwAD3NvdXJjZURpcmVjdG9yeXEAfgANeHB0ADwvVXNlcnMvR3Jhbml1bS9Eb3dubG9hZHMvYmFybmVzaHV0L3RhcmdldC9zY2FsYS0yLjExL2NsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABQOCV4iWFDswzie+3lzR3pVNI1jBA==
+source infos:
+1 items
+/Users/Granium/Downloads/barneshut/src/test/scala/barneshut/BarnesHutSuite.scala -> 
+AAAAAAAAAAA=
+compilations:
+1 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABV+aYHHx1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAQS9Vc2Vycy9HcmFuaXVtL0Rvd25sb2Fkcy9iYXJuZXNodXQvdGFyZ2V0L3NjYWxhLTIuMTEvdGVzdC1jbGFzc2VzdAABLw==
