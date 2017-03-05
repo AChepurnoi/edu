@@ -49,6 +49,8 @@ int main(int argc, char *argv[]){
 		total = total + readed;
 	}
 	free(buffer);
+	close(source);
+	close(dest);
 	printf("%d Total bytes\n",total);
 }
 
