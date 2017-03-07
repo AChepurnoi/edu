@@ -12,7 +12,6 @@ public class Pram extends JComponent {
 
     private double scale = 1;
     private double delta = 0.01;
-    // Для анімації руху
     private final double R = 50;
     private double alpha = 1;
     private int CENTER_X = 50;
@@ -29,8 +28,6 @@ public class Pram extends JComponent {
 
 
 //    x = r*cos(a) + u; y = r*sin(a) + v,
-// где r - радиус, a - угол, (u,v) - координаты центра окружности.
-
     private double getXPosRotated(){
         return R * Math.cos(alpha) + CENTER_X;
     }
@@ -91,7 +88,6 @@ public class Pram extends JComponent {
     }
 
     private void animate(Graphics2D g2d) {
-        // Перетворення для анімації масштабу
 //        g2d.scale(scale, 0.99);
         g2d.translate(getXPosRotated(), getYPosRotated());
 
