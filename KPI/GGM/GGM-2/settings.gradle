@@ -1,0 +1,3 @@
+rootProject.name = 'GGM-2'
+include ':Shared'
+project(':Shared').projectDir = new File(settingsDir, '../Shared')
