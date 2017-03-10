@@ -49,6 +49,7 @@ int main(int argc, char *argv[]){
   	}
 	close(desc);
 	shm_unlink(sharedmem);
+	return 0;
 }
 
 

@@ -20,7 +20,7 @@ void handleError(){
 	exit(0);
 }
 
-void signal_handler( int signo, siginfo_t *si, void * ucontext );
+void signal_handler(int signo, siginfo_t *si, void * ucontext );
 
 int main(int argc, char *argv[]){
 	logdesc = open(logfile, O_WRONLY | O_TRUNC | O_CREAT, 0644);
@@ -30,7 +30,7 @@ int main(int argc, char *argv[]){
 	snprintf(loggingString,MAX_LOG_SIZE,started,getpid());
 	write(logdesc, loggingString, MAX_LOG_SIZE);
 	free(loggingString);
-	
+
 	struct sigaction act; 
 	struct sigaction old;
 	memset (&act, '\0', sizeof(act));
