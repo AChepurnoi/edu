@@ -21,7 +21,7 @@ void daemonProcess(int logfile){
 
 	snprintf(buffer, BUFFER_SIZE, "PID: %d, Daemon process.\n", getpid());
 	write(logfile, buffer, strlen(buffer));
-	pid_t sid = setsid();
+	setsid();
 	chdir(DIR);
 
 	pid_t parent = getppid();
@@ -41,7 +41,6 @@ int main(int argc, char ** argv){
 
 	int logfile = open(filename, O_WRONLY | O_TRUNC | O_CREAT, 0644);
 	pid_t forkResult = fork();
-	char buffer[BUFFER_SIZE];
 	if (forkResult == -1)handleError();
 
 	if (forkResult == 0){

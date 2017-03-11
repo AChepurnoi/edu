@@ -24,7 +24,6 @@ int main(int argc, char ** argv){
 
 	}else{
 		printf("Hello world from root with pid %d, Child: %d, gid:%d, sid: %d\n", curr, forkResult,getgid(), getsid(curr));
-		int status = 0;
 		wait(&forkResult);
 	}
 	printf("End, pid: %d\n", curr);
