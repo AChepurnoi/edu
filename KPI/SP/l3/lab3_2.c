@@ -6,9 +6,6 @@
 #include <unistd.h>
 #include <errno.h>
 #include <sys/mman.h>
-#include <sys/stat.h>
-#include <fcntl.h>  
-#include <sys/mman.h>
 #include <time.h>
 
 char *sharedmem = "/sharedmemory";
