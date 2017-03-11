@@ -15,6 +15,10 @@
 #define MAX_LOG_SIZE 200
 
 const char * logfile = "log";
+const char *mark = "Server Received:";
+const char *closeCommand = "close";
+const char *newline = "\n";
+
 int logd = 0;
 
 void logInFile(const char *str){
@@ -44,6 +48,8 @@ int main (int argc, char **argv){
 
   while(1){
     int connfd = acceptConnection(socketdc);
+    if(connfd < 0) handleError();
+
     logInFile("Received request...\n");
     pid_t forkres = fork();
     if(forkres == 0){
@@ -52,39 +58,38 @@ int main (int argc, char **argv){
       exit(0);
     }
   }
- close(socketdc);
- close(logd);
+  close(socketdc);
+  close(logd);
 }
 
 void handleConnection(int connfd){
-    char buf[MAXLINE];
-    int n;
-    char *mark = "Server Received:";
-    while ( (n = recv(connfd, buf, MAXLINE, 0)) > 0)  {
-      char * loggingString = malloc(MAX_LOG_SIZE);
-      snprintf(loggingString,
-        strlen(mark) + n,
-        "%s %s", mark, buf);
-      
-      logInFile(loggingString);
-      logInFile("\n");
-      free(loggingString);
-      
-      send(connfd, buf, n, 0);
-    }
+  char buf[MAXLINE];
+  memset(buf, 0, sizeof(buf));
+  int n;
+  
+  while ( (n = recv(connfd, buf, MAXLINE, 0)) > 0){
+    char *loggingString = malloc(MAX_LOG_SIZE);
+    strcpy(loggingString, mark);
+    strcat(loggingString, buf);
+    strcat(loggingString, newline);
+    logInFile(loggingString);
+    send(connfd, loggingString, strlen(loggingString), 0);
+    free(loggingString);
+    if(strcmp(closeCommand, buf) == 0) break;
+    memset(buf, 0, sizeof(buf));
+    
+  }
+  if (n < 0) handleError();
 
-    if (n < 0) {
-      logInFile("Read error\n");
-      exit(1);
-    }
-    logInFile("Client serving is finished\n");
+  logInFile("Client serving is finished\n");
 }
 
 int acceptConnection(int socketdc){
-    struct sockaddr_in cliaddr;
-    socklen_t clilen = sizeof(cliaddr);
-    int connfd = accept (socketdc, (struct sockaddr *) &cliaddr, &clilen);
-    return connfd;
+  struct sockaddr_in cliaddr;
+  socklen_t clilen = sizeof(cliaddr);
+  int connfd = accept (socketdc, (struct sockaddr *) &cliaddr, &clilen);
+  if(connfd < 0) handleError();
+  return connfd;
 }
 
 int socketSetup(){
@@ -96,7 +101,9 @@ int socketSetup(){
   servaddr.sin_addr.s_addr = htonl(INADDR_ANY);
   servaddr.sin_port = htons(SERV_PORT);
 
-  bind (socketdc, (struct sockaddr *) &servaddr, sizeof(servaddr));
+  int bindRes = bind(socketdc, (struct sockaddr *) &servaddr, sizeof(servaddr));
+  if(bindRes < 0) handleError();
+
   listen(socketdc, LISTENQ);
   return socketdc;
 }
