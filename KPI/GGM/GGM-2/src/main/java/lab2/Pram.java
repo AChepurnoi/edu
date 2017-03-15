@@ -88,7 +88,7 @@ public class Pram extends JComponent {
     }
 
     private void animate(Graphics2D g2d) {
-//        g2d.scale(scale, 0.99);
+        g2d.scale(scale, 0.99);
         g2d.translate(getXPosRotated(), getYPosRotated());
 
     }
