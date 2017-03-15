@@ -1,1 +1,1 @@
-Frontend React stuff
+Frontend stuff
