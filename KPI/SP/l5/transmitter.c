@@ -99,12 +99,14 @@ void formL2Headers(char * buffer, const int len, char Lframe){
 }
 
 void layer2(char *buffer, int bufferSize, char *pipe, char Lframe){
-  if(mkfifo(pipe,0666)) {
-    handleError();
-  }
+  
   int len = shiftBytes(buffer, 0, bufferSize);
   formL2Headers(buffer,len, Lframe);
   printBytes(buffer,len, L2PDUSIZE);
+
+  if(mkfifo(pipe,0666)) {
+    handleError();
+  }
   for(int i = 0, offset = 0; i < (len / L2PDUSIZE) + 1; i++, offset = L2PDUSIZE * i){
     int blockLen = (i == (len / L2PDUSIZE)) ? len - offset : L2PDUSIZE ;
     layer1(buffer + offset, blockLen, pipe);

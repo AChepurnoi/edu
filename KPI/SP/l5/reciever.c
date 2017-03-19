@@ -14,20 +14,16 @@
 
 
 int readPDU(char * buffer, const char* pipe){
-	printf("Listening\n");
-	
+
     int pipedc = open(pipe, O_RDONLY);
     if(pipedc < 0) handleError();
 
     struct pollfd *pfds = malloc(sizeof(struct pollfd));
     pfds->fd = pipedc;
     pfds->events = POLLIN;
-    printf("Poll Reading packet for pipe %s, Pipe dc: %d\n", pipe, pipedc);
     poll(pfds, 1, -1);
-    printf("After Poll Reading packet\n");
 
     int readed = read(pipedc,buffer, L2PDUSIZE);
-    printf("Readed bytes: %d\n",readed);
     if(readed < 0) handleError();
     free(pfds);
     close(pipedc);
@@ -43,9 +39,6 @@ int buildResponse(char *pdu, int pduLen, char* response){
 	char *pduValidationCrc = malloc(2);
 	*(pduValidationCrc) = getByte(validationCrc,1);
 	*(pduValidationCrc + 1) = getByte(validationCrc,0);
-	printf("rec crc%02X%02X\n", pduCrc[0] & 0xFF, pduCrc[1] & 0xFF);
-	printf("ptr crc%02X%02X\n", pduValidationCrc[0] & 0xFF, pduValidationCrc[1] & 0xFF);
-
 	int res = memcmp(pduCrc, pduValidationCrc, 2);
 
 	memcpy(response, pdu, 1);
@@ -60,20 +53,42 @@ int buildResponse(char *pdu, int pduLen, char* response){
 }
 
 int sendResponse(char *response, int responseLen, const char* pipe){
-    
-	printf("Opening pipe\n");
+
     int pipedc = open(pipe, O_WRONLY);
     if(pipedc < 0) handleError();
     struct pollfd *pfds = malloc(sizeof(struct pollfd));
     pfds->fd = pipedc;
     pfds->events = POLLOUT;
     poll(pfds, 1, -1);
-    printf("Sending packet\n");
     if(write(pipedc, response, responseLen) < 0) handleError();
-    printf("Done\n");
     free(pfds);
     close(pipedc);
     return 0;
+}
+
+
+int removeL2Headers(char * buffer, int len){
+	int offset = 0;
+	for(int i = 0,totalBlocks = (len / L2PDUSIZE); i < totalBlocks + 1; i++){
+		char * ptr = buffer + offset;
+		char * src = buffer + i * L2PDUSIZE;
+		int l3Len = (i == totalBlocks) ? (len % L2PDUSIZE) - L2HEADERSIZE - L2SUFFIX : L3PDUSIZE;
+		memmove(ptr, src + L2HEADERSIZE, l3Len);
+		offset = offset + l3Len;
+	}
+	return offset;
+}
+
+int removeL3Headers(char *buffer, int len){
+	int offset = 0;
+	for(int i = 0, totalBlocks = (len / L3PDUSIZE); i < totalBlocks + 1; i++){
+		char *ptr = buffer + offset;
+		char * src = buffer + i * L3PDUSIZE;
+		int dataLen = (i == totalBlocks) ? (len % L3PDUSIZE) - L3HEADERSIZE : MSS;
+		memmove(ptr,src + L3HEADERSIZE, dataLen);
+		offset = offset + dataLen;
+	}
+	return offset;
 }
 
 int r_layer1(char* buffer, const char *pipe){
@@ -81,26 +96,54 @@ int r_layer1(char* buffer, const char *pipe){
 	int len = readPDU(buffer, pipe);
 	char *response = malloc(RESPONSESIZE);
 	buildResponse(buffer, len, response);
-	printBytes(response, 4, 4);
 	sendResponse(response, RESPONSESIZE, pipe);
 	return len;
 }
 
-void r_layer2(const char *pipe){
-	char buffer[L2PDUSIZE * MAXPDU];
+int r_layer2(char *buffer, char* Lframe, const char *pipe){
 	int c = 0;
 	while(1){
 		int len = r_layer1(buffer + c, pipe);
-		char Lframe = *(buffer + c + 6);
+		*(Lframe) = *(buffer + c + 6);
 		c = c + len;
-		printf("L frame %X\n", Lframe);
-		if(Lframe) break;	
+		if(*Lframe) break;	
 	}
+
 	printBytes(buffer, c, L2PDUSIZE);
+	int len = removeL2Headers(buffer, c);
+	printBytes(buffer, len, L3PDUSIZE);
+	return len;
 
 }
 
+
+int r_layer3(char * buffer, char *Lframe, const char* pipe){
+	int len = r_layer2(buffer, Lframe, pipe);
+	len = removeL3Headers(buffer, len);
+	printBytes(buffer, len, MSS);
+	return len;
+} 
+
+int r_layer4(const char* file, const char* pipe){
+	char *buffer = malloc(L2PDUSIZE * MAXPDU);
+	char *Lframe = malloc(1);
+
+	for(int i = 0; ; i++){
+		int mode = (i == 0) ? (O_WRONLY | O_TRUNC | O_CREAT) : (O_WRONLY | O_APPEND);
+
+		int dest = open(file, mode, 0644);
+		int len = r_layer3(buffer, Lframe, pipe);
+		write(dest, buffer, len);
+		close(dest);
+		if(*Lframe == 0x0F) break;
+	}
+	free(Lframe);
+	free(buffer);
+	return 0;
+}
+
 void recieve(const char *file, const char *pipe){
-	r_layer2(pipe);
+	r_layer4(file, pipe);
+
 }
 
