@@ -15,4 +15,5 @@ extern const int L2SUFFIX;
 extern const int L3PDUSIZE;
 extern const int L2PDUSIZE;
 extern const int MAXPDU;
+extern const int RESPONSESIZE;
 

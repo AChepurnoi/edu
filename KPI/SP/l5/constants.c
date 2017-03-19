@@ -1,4 +1,3 @@
-
 const char *fileparam = "-f";
 const char *pipeparam = "-p";
 const char *recieveModeParam = "-r";
@@ -18,3 +17,5 @@ const int L2SUFFIX = 3;
 const int L3PDUSIZE = L3HEADERSIZE + MSS;
 const int L2PDUSIZE = L2HEADERSIZE + L3PDUSIZE + L2SUFFIX;
 const int MAXPDU = 40;
+
+const int RESPONSESIZE = 4;
