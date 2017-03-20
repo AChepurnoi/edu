@@ -18,7 +18,7 @@ void handleError(){
   exit(1);
 }
 
-void printBytes(char *array, int size, int blockSize){
+void printBytes(const char *array, int size, int blockSize){
   for(int i = 0; i < size; i ++){
     if(i % blockSize == 0) printf("\n");
     printf("%02X",array[i] & 0xFF); //clears all but 1byte

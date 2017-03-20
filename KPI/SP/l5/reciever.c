@@ -40,6 +40,7 @@ int buildResponse(char *pdu, int pduLen, char* response){
 	*(pduValidationCrc) = getByte(validationCrc,1);
 	*(pduValidationCrc + 1) = getByte(validationCrc,0);
 	int res = memcmp(pduCrc, pduValidationCrc, 2);
+	printf("%s Validation, %s original", pduValidationCrc, pduCrc);
 
 	memcpy(response, pdu, 1);
 	memcpy(response + 1, pdu + 5, 1);
@@ -97,6 +98,7 @@ int r_layer1(char* buffer, const char *pipe){
 	char *response = malloc(RESPONSESIZE);
 	buildResponse(buffer, len, response);
 	sendResponse(response, RESPONSESIZE, pipe);
+	printf("Recieved\n");
 	return len;
 }
 
@@ -130,9 +132,10 @@ int r_layer4(const char* file, const char* pipe){
 
 	for(int i = 0; ; i++){
 		int mode = (i == 0) ? (O_WRONLY | O_TRUNC | O_CREAT) : (O_WRONLY | O_APPEND);
-
 		int dest = open(file, mode, 0644);
+		if(dest < 0) handleError();
 		int len = r_layer3(buffer, Lframe, pipe);
+		printf("writing to file\n");
 		write(dest, buffer, len);
 		close(dest);
 		if(*Lframe == 0x0F) break;

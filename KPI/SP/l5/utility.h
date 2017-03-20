@@ -12,7 +12,7 @@ void handleError();
 const InputParams* getParams(int, char**);
 int checkMode(int,char**);
 const char *getParameter(const char *, int, char **);
-void printBytes(char *array, int size, int blockSize);
+void printBytes(const char *array, int size, int blockSize);
 
 // https://www.lammertbies.nl/comm/info/crc-calculation.html
 // Verify there ^

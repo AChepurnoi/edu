@@ -19,3 +19,4 @@ const int L2PDUSIZE = L2HEADERSIZE + L3PDUSIZE + L2SUFFIX;
 const int MAXPDU = 40;
 
 const int RESPONSESIZE = 4;
+const int TTR = 16;
