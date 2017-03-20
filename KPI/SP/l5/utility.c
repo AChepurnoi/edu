@@ -7,11 +7,19 @@
 #include <fcntl.h>
 #include <errno.h>
 #include "constants.h"
+#include <poll.h>
 
 char getByte(int number, int n){
   return (char) (number >> (8 * n)) & 0xFF;
 }
 
+
+struct pollfd* createPollfd(int fd, short events){
+  struct pollfd *pfds = malloc(sizeof(struct pollfd));
+  pfds->fd = fd;
+  pfds->events = events;
+  return pfds;
+}
 
 void handleError(){
   printf("%s\n", strerror(errno));

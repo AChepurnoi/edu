@@ -15,35 +15,35 @@
 
 int readPDU(char * buffer, const char* pipe){
 
-    int pipedc = open(pipe, O_RDONLY);
-    if(pipedc < 0) handleError();
+  int pipedc = open(pipe, O_RDONLY);
+  if(pipedc < 0) handleError();
 
-    struct pollfd *pfds = malloc(sizeof(struct pollfd));
-    pfds->fd = pipedc;
-    pfds->events = POLLIN;
-    poll(pfds, 1, -1);
+  struct pollfd *pfds = createPollfd(pipedc, POLLIN);
+  if(poll(pfds, 1, -1) < 0) handleError();
 
-    int readed = read(pipedc,buffer, L2PDUSIZE);
-    if(readed < 0) handleError();
-    free(pfds);
-    close(pipedc);
-    printBytes(buffer, L2PDUSIZE, L2PDUSIZE);
-    return readed;
+  int readed = read(pipedc,buffer, L2PDUSIZE);
+  if(readed < 0) handleError();
+  
+  free(pfds);
+  close(pipedc);
+  return readed;
 }
 
 int buildResponse(char *pdu, int pduLen, char* response){
 	char *pduCrc = malloc(2);
 	memcpy(pduCrc, pdu + pduLen - 3, 2);
 	memset(pdu + pduLen - 3, 0, 2);
+	
 	short validationCrc = crc16(0, pdu, pduLen);
 	char *pduValidationCrc = malloc(2);
 	*(pduValidationCrc) = getByte(validationCrc,1);
 	*(pduValidationCrc + 1) = getByte(validationCrc,0);
+	
 	int res = memcmp(pduCrc, pduValidationCrc, 2);
-	printf("%s Validation, %s original", pduValidationCrc, pduCrc);
 
 	memcpy(response, pdu, 1);
 	memcpy(response + 1, pdu + 5, 1);
+
 	if(res == 0) memset(response + 2, 0x06, 1);
 	else memset(response + 2, 0x15, 1);
 	memcpy(response + 3, pdu + pduLen - 1, 1);
@@ -57,11 +57,11 @@ int sendResponse(char *response, int responseLen, const char* pipe){
 
     int pipedc = open(pipe, O_WRONLY);
     if(pipedc < 0) handleError();
-    struct pollfd *pfds = malloc(sizeof(struct pollfd));
-    pfds->fd = pipedc;
-    pfds->events = POLLOUT;
-    poll(pfds, 1, -1);
+
+    struct pollfd *pfds = createPollfd(pipedc, POLLOUT);
+    if(poll(pfds, 1, -1) < 0) handleError();
     if(write(pipedc, response, responseLen) < 0) handleError();
+
     free(pfds);
     close(pipedc);
     return 0;
@@ -98,7 +98,6 @@ int r_layer1(char* buffer, const char *pipe){
 	char *response = malloc(RESPONSESIZE);
 	buildResponse(buffer, len, response);
 	sendResponse(response, RESPONSESIZE, pipe);
-	printf("Recieved\n");
 	return len;
 }
 
@@ -111,9 +110,9 @@ int r_layer2(char *buffer, char* Lframe, const char *pipe){
 		if(*Lframe) break;	
 	}
 
-	printBytes(buffer, c, L2PDUSIZE);
+	// printBytes(buffer, c, L2PDUSIZE);
 	int len = removeL2Headers(buffer, c);
-	printBytes(buffer, len, L3PDUSIZE);
+	// printBytes(buffer, len, L3PDUSIZE);
 	return len;
 
 }
@@ -122,7 +121,7 @@ int r_layer2(char *buffer, char* Lframe, const char *pipe){
 int r_layer3(char * buffer, char *Lframe, const char* pipe){
 	int len = r_layer2(buffer, Lframe, pipe);
 	len = removeL3Headers(buffer, len);
-	printBytes(buffer, len, MSS);
+	// printBytes(buffer, len, MSS);
 	return len;
 } 
 
@@ -134,9 +133,10 @@ int r_layer4(const char* file, const char* pipe){
 		int mode = (i == 0) ? (O_WRONLY | O_TRUNC | O_CREAT) : (O_WRONLY | O_APPEND);
 		int dest = open(file, mode, 0644);
 		if(dest < 0) handleError();
+
 		int len = r_layer3(buffer, Lframe, pipe);
-		printf("writing to file\n");
 		write(dest, buffer, len);
+		
 		close(dest);
 		if(*Lframe == 0x0F) break;
 	}

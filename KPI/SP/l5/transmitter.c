@@ -15,12 +15,11 @@
 void sendPDU(const char *buffer, int len, char *pipe){
   int pipedc = open(pipe, O_WRONLY);
   if(pipedc < 0) handleError();
-  
-  struct pollfd *pfds = malloc(sizeof(struct pollfd));
-  pfds->fd = pipedc;
-  pfds->events = POLLOUT;
-  poll(pfds, 1, -1);
-  write(pipedc, buffer, len);
+
+  struct pollfd *pfds = createPollfd(pipedc, POLLOUT);
+  if(poll(pfds, 1, -1) < 0) handleError();
+  if(write(pipedc, buffer, len) < len) handleError();
+
   free(pfds);
   close(pipedc);
 }
@@ -29,12 +28,11 @@ int readResponse(char *buffer, char *pipe){
   int pipedc = open(pipe, O_RDONLY);
   if(pipedc < 0) return -1;
 
-  struct pollfd *pfds = malloc(sizeof(struct pollfd));
-  pfds->fd = pipedc;
-  pfds->events = POLLIN;
-  poll(pfds, 1, -1);
+  struct pollfd *pfds = createPollfd(pipedc, POLLIN);
+  if(poll(pfds, 1, -1) < 0) handleError();
 
   int len = read(pipedc,buffer,RESPONSESIZE);
+  if(len < 0) handleError();
 
   free(pfds);
   close(pipedc);
@@ -49,16 +47,13 @@ int validateResponse(char *response, int len){
   //maybe i should set errno
 }
 
-int layer1(char *buffer, int len, char* pipe){
-  printf("Layer 1. Current packet len %d \n", len);
-  printBytes(buffer, len, len);
-
+int t_layer1(char *buffer, int len, char* pipe){
   char *response = malloc(RESPONSESIZE);
   int result = -1;
   for(int i = 0; i < TTR && result < 0; i++){
     sendPDU(buffer, len, pipe);
-    int len = readResponse(response, pipe);
-    result = validateResponse(response, len);
+    int responseLen = readResponse(response, pipe);
+    result = validateResponse(response, responseLen);
   }
   free(response);
   return result;
@@ -94,6 +89,7 @@ void formL2Headers(char * buffer, const int len, char Lframe){
     char *item = buffer + offset;
     *(item) = 0x02;
 
+    //Store numbers as big endian :(
     *(item + 1) = getByte(pduSize, 2);
     *(item + 2) = getByte(pduSize, 1);
     *(item + 3) = getByte(pduSize, 0);
@@ -108,42 +104,37 @@ void formL2Headers(char * buffer, const int len, char Lframe){
   }
 }
 
-void layer2(char *buffer, int bufferSize, char *pipe, char Lframe){
-  
-  if(mkfifo(pipe,0666)) {
-    handleError();
-  }
+void t_layer2(char *buffer, int bufferSize, char *pipe, char Lframe){
+
   int len = shiftBytes(buffer, 0, bufferSize);
   formL2Headers(buffer,len, Lframe);
-  printBytes(buffer,len, L2PDUSIZE);
 
- 
+  // printf("Formed buffer:");
+  // printBytes(buffer, len, L2PDUSIZE);
 
   for(int i = 0, offset = 0; i < (len / L2PDUSIZE) + 1; i++, offset = L2PDUSIZE * i){
     int blockLen = (i == (len / L2PDUSIZE)) ? len - offset : L2PDUSIZE ;
     int res = -1;
     for(int j = 0; j < TTR && res < 0; j++){
-      res = layer1(buffer + offset, blockLen, pipe);
+      res = t_layer1(buffer + offset, blockLen, pipe);
     }
 
     if(res < 0) {
       printf("Critical error. Can't transmit packet with layer 1");
       exit(-1);
     }
-   
   }
-  remove(pipe);
 
 }
 
 int formL3Headers(char *data, int len,  char* buffer){
 
   int chunkCount = 0;
-  for(; chunkCount < len / MSS; chunkCount ++){
-
+  while(chunkCount < len / MSS){
     int senderOffset = chunkCount * L3PDUSIZE ;
     int bufferOffset = chunkCount * MSS;
     memcpy(buffer + senderOffset + L3HEADERSIZE, data + bufferOffset, MSS);
+    chunkCount = chunkCount + 1;
   }
 
   int lastChunkSize = len % MSS;
@@ -152,36 +143,37 @@ int formL3Headers(char *data, int len,  char* buffer){
   return size;
 }
 
-void layer3(char *buffer, int bufferSize, char* pipe, char Lframe){
-  char *sendBuffer = malloc(L2PDUSIZE * MAXPDU);
-  memset(sendBuffer, 0, L2PDUSIZE * MAXPDU);
-  
+void t_layer3(char *buffer, int bufferSize, char* pipe, char Lframe){  
   if(bufferSize > L2PDUSIZE * MAXPDU){
     printf("Buffer size > sending buffer size \n");
     exit(-1);
   }
-
+  char *sendBuffer = malloc(L2PDUSIZE * MAXPDU);
+  memset(sendBuffer, 0, L2PDUSIZE * MAXPDU);
   int size = formL3Headers(buffer, bufferSize, sendBuffer);
-  printBytes(sendBuffer,size,L3PDUSIZE);
-  layer2(sendBuffer, size, pipe, Lframe);
+  
+  t_layer2(sendBuffer, size, pipe, Lframe);
 }
 
-void layer4(int filedc, char* pipe){
+void t_layer4(int filedc, char* pipe){
   char *buffer = malloc(BUFFER_MAX_SIZE);
   while(1){
     int size = read(filedc, buffer, BUFFER_MAX_SIZE);
-    printf("Buffer size: %d\n", size);
     char Lframe = size < BUFFER_MAX_SIZE ? 0x0F : 0x01;
-    layer3(buffer, size, pipe, Lframe);
+    t_layer3(buffer, size, pipe, Lframe);
     if(size < BUFFER_MAX_SIZE) break;
   }
-
   free(buffer);
 }
 
 int transmit(const char* file, char* pipe){
+  if(mkfifo(pipe,0666)) {
+    handleError();
+  }
   int filedc = open(file, O_RDONLY);
-  layer4(filedc, pipe);
+  t_layer4(filedc, pipe);
+  remove(pipe);
   return 0;
+
 }
 
