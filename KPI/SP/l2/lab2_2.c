@@ -28,9 +28,9 @@ void daemonProcess(int logfile){
 	close(logfile);
 
 	int devnull = open("/dev/null", O_RDWR);
-	dup2(STDIN_FILENO, devnull);
-	dup2(STDOUT_FILENO, devnull);
-	dup2(STDERR_FILENO, devnull);
+	dup2(devnull, STDIN_FILENO);
+	dup2(devnull, STDOUT_FILENO);
+	dup2(devnull, STDERR_FILENO);
 
 	while(1){}//spin
 
