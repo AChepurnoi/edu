@@ -27,10 +27,11 @@ void daemonProcess(int logfile){
 	wait(&parent);
 	close(logfile);
 
-	int devnull = open("/dev/null", O_RDWR);
-	dup2(devnull, STDIN_FILENO);
-	dup2(devnull, STDOUT_FILENO);
-	dup2(devnull, STDERR_FILENO);
+	for(i=0;i<255;i++) close(i);
+	open("/dev/null");
+	dup(0);
+	dup(0);
+	
 
 	while(1){}//spin
 

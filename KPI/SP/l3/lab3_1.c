@@ -7,12 +7,12 @@
 #include <errno.h>
 #include <signal.h>
 
-extern int errno ;
+
 const int MAX_LOG_SIZE = 1000;
 char *started = "Main: Started with pid %d\n";
 const char *waiting = "Main: Waiting 2 seconds\n";
 const char *logfile = "log";
-int logdesc = -1;
+
 
 
 void handleError(){
@@ -22,12 +22,14 @@ void handleError(){
 
 void signal_handler(int signo, siginfo_t *si, void * ucontext );
 
+//Fix writing to log file
+
 int main(int argc, char *argv[]){
-	logdesc = open(logfile, O_WRONLY | O_TRUNC | O_CREAT, 0644);
+	int logdesc = open(logfile, O_WRONLY | O_TRUNC | O_CREAT, 0644);
 	if(logdesc < 0) handleError();
 
 	char *loggingString = malloc(MAX_LOG_SIZE);
-	snprintf(loggingString,MAX_LOG_SIZE,started,getpid());
+	snprintf(loggingString, MAX_LOG_SIZE, started, getpid());
 	write(logdesc, loggingString, MAX_LOG_SIZE);
 	free(loggingString);
 
@@ -50,7 +52,8 @@ int main(int argc, char *argv[]){
 	close(logdesc);
 }
 
-void signal_handler( int signo, siginfo_t *si, void * ucontext ){
+void signal_handler(int signo, siginfo_t *si, void * ucontext ){
+	int logdesc = open(logfile, O_WRONLY | O_APPEND, 0644);
 	char *loggingString = malloc(MAX_LOG_SIZE);
 
 	snprintf(loggingString,
@@ -59,4 +62,5 @@ void signal_handler( int signo, siginfo_t *si, void * ucontext ){
 		si->si_signo, si->si_code, si->si_pid, si->si_uid);
 	write(logdesc, loggingString, strlen(loggingString));
 	free(loggingString);
+	close(logdesc);
 }

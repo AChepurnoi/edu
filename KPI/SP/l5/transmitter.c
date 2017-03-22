@@ -167,6 +167,7 @@ void t_layer4(int filedc, char* pipe){
 }
 
 int transmit(const char* file, char* pipe){
+  //check with stat
   if(mkfifo(pipe,0666)) {
     handleError();
   }

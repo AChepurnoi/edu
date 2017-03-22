@@ -54,6 +54,8 @@ int checkMode(int argc,char** argv){
   return -1;
 }
 
+
+//get opt?
 const InputParams* getParams(int argc, char** argv){
   InputParams *params = malloc(sizeof(InputParams));
   const char *file = getParameter(fileparam, argc, argv);

@@ -16,13 +16,13 @@ typedef struct datum{
 	char text[100];
 }datum;
 
-extern int errno ;
 
 void handleError(){
 	printf("%s\n", strerror(errno) );
 	exit(0);
 }
 
+//get free pages?
 int main(int argc, char *argv[]){
 
 	int desc = shm_open(sharedmem, O_RDWR | O_CREAT, 0777);
