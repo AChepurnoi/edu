@@ -16,6 +16,7 @@ public class Pram extends JComponent {
     private double alpha = 1;
     private int CENTER_X = 50;
     private int CENTER_Y = 50;
+    private float opacity = 0.9f;
 
 
     private static int maxWidth = 300;
@@ -44,19 +45,20 @@ public class Pram extends JComponent {
         }
         alpha = alpha + 0.05;
         if(alpha >= 360) alpha = 0;
-
+        opacity -= delta;
+        if(opacity < 0.25f) opacity = 0.75f;
         scale += delta;
         repaint();
     }
 
     public void drawDecorator(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
+        g2d.setPaint(new GradientPaint(25, 25, Color.RED, 15, 25, Color.GREEN, true));
         g2d.translate(0, 0);
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
                 RenderingHints.VALUE_ANTIALIAS_ON);
         g2d.setRenderingHint(RenderingHints.KEY_RENDERING,
                 RenderingHints.VALUE_RENDER_QUALITY);
-        g2d.setColor(Color.CYAN);
         BasicStroke bs1 = new BasicStroke(20, BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL);
         g2d.setStroke(bs1);
         g2d.drawRect(10, 10, 480, 455);
@@ -68,6 +70,7 @@ public class Pram extends JComponent {
     @Override
     public void paint(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
+
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
                 RenderingHints.VALUE_ANTIALIAS_ON);
         g2d.setRenderingHint(RenderingHints.KEY_RENDERING,
@@ -103,7 +106,10 @@ public class Pram extends JComponent {
                 {0, 0}
         };
         GradientPaint gp = new GradientPaint(5, 90, Color.RED, 20, 45, Color.GREEN, true);
+        if(opacity > 1 || opacity < 0) opacity=0.75f;
+        g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, opacity));
         g2d.setPaint(gp);
+
         GeneralPath star = new GeneralPath();
         star.moveTo(points[0][0], points[0][1]);
         for (int k = 1; k < points.length; k++)

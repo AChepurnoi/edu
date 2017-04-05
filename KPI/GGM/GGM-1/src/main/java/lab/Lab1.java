@@ -25,8 +25,10 @@ public class Lab1 extends Application {
         scene.setFill(Color.ORANGE);
 
         Pram pram = new Pram(275,175);
-        root.getChildren().addAll(pram.drawableParts());
+        root.getChildren().add(pram.ellips().get(0));
 
+        root.getChildren().addAll(pram.drawableParts());
+        root.getChildren().add(pram.text());
         primaryStage.setScene(scene);
         primaryStage.show();
     }

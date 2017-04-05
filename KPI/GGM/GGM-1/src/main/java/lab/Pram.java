@@ -4,10 +4,8 @@ package lab; /**
 
 import javafx.scene.Node;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Line;
-import javafx.scene.shape.Polygon;
-import javafx.scene.shape.Shape;
+import javafx.scene.shape.*;
+import javafx.scene.text.Text;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -57,6 +55,18 @@ public class Pram {
 
     }
 
+    public List<Ellipse> ellips(){
+        Ellipse ellipse = new Ellipse(OFFSET_X + 100, OFFSET_Y + 150, 100,50);
+        ellipse.setFill(Color.RED);
+        return Arrays.asList(ellipse);
+    }
+
+    public Text text(){
+       Text text = new Text("Hello world");
+       text.setX(OFFSET_X + 100);
+       text.setY(OFFSET_Y + 100);
+       return text;
+    }
     private List<Shape> body(){
         Shape polygon = new Polygon(OFFSET_X, OFFSET_Y,
                 OFFSET_X, OFFSET_Y + 120,
