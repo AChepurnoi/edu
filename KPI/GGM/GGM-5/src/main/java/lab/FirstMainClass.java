@@ -1,5 +1,6 @@
 package lab;
 
+import com.sun.j3d.utils.geometry.Primitive;
 import com.sun.j3d.utils.universe.*;
 
 import java.awt.Color;
@@ -119,10 +120,14 @@ public class FirstMainClass extends JFrame {
     private void addAppearance(){
         Appearance planeAppearance = new Appearance();
         planeAppearance.setTexture(getTexture("GGM-5/files/metal.jpg"));
+
         TextureAttributes texAttr = new TextureAttributes();
-        texAttr.setTextureMode(TextureAttributes.COMBINE);
+        texAttr.setTextureMode(TextureAttributes.MODULATE);
+        int primflags = Primitive.GENERATE_NORMALS + Primitive.GENERATE_TEXTURE_COORDS;
         planeAppearance.setTextureAttributes(texAttr);
-        planeAppearance.setMaterial(getMaterial());
+
+//        planeAppearance.setMaterial(getMaterial());
+
         Shape3D plane = nameMap.get("default");
         plane.setAppearance(planeAppearance);
     }

@@ -10,11 +10,14 @@ import com.sun.j3d.loaders.*;
 import com.sun.j3d.loaders.objectfile.*;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.Hashtable;
 import java.util.Enumeration;
 
-public class HeliApp extends JFrame
-{
+public class HeliApp extends JFrame implements ActionListener, KeyListener {
     //The canvas to be drawn upon.
     public Canvas3D myCanvas3D;
 
@@ -35,10 +38,12 @@ public class HeliApp extends JFrame
     }
     public static void main(String[] args)
     {
+
         HeliApp cockroach = new HeliApp();
+
     }
-    public void createSceneGraph(SimpleUniverse su)
-    {
+
+    public void createSceneGraph(SimpleUniverse su) {
         ObjectFile f = new ObjectFile(ObjectFile.RESIZE);
         Scene cockroachScene = null;
         try
@@ -196,5 +201,26 @@ public class HeliApp extends JFrame
         light1.setInfluencingBounds(bounds);
         bgLight.addChild(light1);
         su.addBranchGraph(bgLight);
+    }
+
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
     }
 }

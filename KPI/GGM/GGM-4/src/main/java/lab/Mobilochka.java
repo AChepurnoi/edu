@@ -3,13 +3,17 @@ package lab;
 
 import com.sun.j3d.utils.geometry.Box;
 import com.sun.j3d.utils.geometry.ColorCube;
+import com.sun.j3d.utils.geometry.Primitive;
+import com.sun.j3d.utils.image.TextureLoader;
 import com.sun.j3d.utils.universe.SimpleUniverse;
 
 import javax.media.j3d.*;
 import javax.swing.*;
 import javax.vecmath.Color3f;
+import javax.vecmath.Color4f;
 import javax.vecmath.Point3d;
 import javax.vecmath.Vector3f;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -36,6 +40,7 @@ public class Mobilochka implements ActionListener {
         BranchGroup phone = phone();
         treeTransformGroup.setTransform(treeTransform3D);
         treeTransformGroup.addChild(phone);
+        treeTransformGroup.setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);
         universe.getViewingPlatform().setNominalViewingTransform();
 
 
@@ -47,16 +52,22 @@ public class Mobilochka implements ActionListener {
     public BranchGroup phone() {
         BranchGroup group = new BranchGroup();
         Appearance appearance = new Appearance();
-        ColoringAttributes attr = new ColoringAttributes();
-        attr.setColor(new Color3f(1.7f, 1.6f, .0f));
-        Color3f ambient = new Color3f(0.4f, 0.15f, .15f);
-        Color3f diffuse = new Color3f(1.2f, 1.0f, .15f);
-        Color3f specular = new Color3f(0.2f, 0.5f, 0.0f);
-        appearance.setMaterial(new Material(ambient,
-                new Color3f(0.5f, 1.5f, 0.9f), diffuse, specular, 1.0f));
 
-        appearance.setColoringAttributes(attr);
-        Box phone = new Box(0.3f, 0.7f, 0.1f, appearance);
+        TextureLoader loader = new TextureLoader("GGM-4/src/main/java/lab/samsung.jpg", "LUMINACE", new Container());
+        Texture texture = loader.getTexture();
+        texture.setBoundaryModeS(Texture.WRAP);
+        texture.setBoundaryModeT(Texture.WRAP);
+        texture.setBoundaryColor(new Color4f(0.0f, 1.0f, 1.0f, 0.0f));
+// встановлюємо атрибути текстури
+// може бути REPLACE, BLEND або DECAL замість MODULATE
+        TextureAttributes texAttr = new TextureAttributes();
+        texAttr.setTextureMode(TextureAttributes.MODULATE);
+        int primflags = Primitive.GENERATE_NORMALS + Primitive.GENERATE_TEXTURE_COORDS;
+        appearance.setTexture(texture);
+        appearance.setTextureAttributes(texAttr);
+
+        Box phone = new Box(0.3f, 0.7f, 0.1f, primflags,appearance);
+        phone.setAppearance(appearance);
         group.addChild(phone);
         group.addChild(buttons());
         group.addChild(display());
@@ -75,15 +86,15 @@ public class Mobilochka implements ActionListener {
     public BranchGroup display() {
         BranchGroup group = new BranchGroup();
         Appearance appearance = new Appearance();
-        ColoringAttributes attr = new ColoringAttributes();
-        attr.setColor(new Color3f(1.7f, 1.6f, .0f));
         Color3f ambient = new Color3f(0.2f, 0.15f, .15f);
         Color3f diffuse = new Color3f(1.2f, 1.15f, .15f);
         Color3f specular = new Color3f(0.0f, 0.0f, 0.0f);
+
         appearance.setMaterial(new Material(ambient,
                 new Color3f(1.2f, 0.5f, 0.5f), diffuse, specular, 1.0f));
+        int primflags = Primitive.GENERATE_NORMALS + Primitive.GENERATE_TEXTURE_COORDS;
+        Box box = new Box(0.25f, 0.18f, 0.05f,primflags, appearance);
 
-        Box box = new Box(0.25f, 0.18f, 0.05f, appearance);
         TransformGroup tg = new TransformGroup();
         Transform3D transform = new Transform3D();
         box.setAppearance(appearance);
@@ -134,7 +145,7 @@ public class Mobilochka implements ActionListener {
         objRoot.addChild(treeTransformGroup);
         // налаштовуємо освітлення
         BoundingSphere bounds = new BoundingSphere(new Point3d(0.0, 0.0, 0.0), 500.0);
-        Color3f light1Color = new Color3f(0f, 0f, 0f);
+        Color3f light1Color = new Color3f(1f, 0f, 0f);
         Vector3f light1Direction = new Vector3f(4.0f, -7.0f, -12.0f);
         DirectionalLight light1 = new DirectionalLight(light1Color,
                 light1Direction);

@@ -20,7 +20,7 @@ import java.nio.file.Paths;
 public class JavaFXApplication extends Application {
 
     private final static String TRAJECTORY_FILE = "GGM-3/src/main/java/lab/trajectory.bmp";
-    private final static double TRANSITION_DURATION = 4000.;
+    private final static double TRANSITION_DURATION = 10000.;
     private final static double ROTATION_ANGLE = 360.;
     private final static double SCALE_TO = 0.5;
 
@@ -45,6 +45,7 @@ public class JavaFXApplication extends Application {
 
         ParallelTransition parallelTransition = new ParallelTransition();
         parallelTransition.getChildren().addAll(
+                createOpacityTransition(bird),
                 createPathTransition(bird, path),
                 createRotateTransition(bird),
                 createScaleTransition(bird)
@@ -119,6 +120,18 @@ public class JavaFXApplication extends Application {
 
         scaleTransition.setToX(SCALE_TO);
         scaleTransition.setToY(SCALE_TO);
+        scaleTransition.setCycleCount(Timeline.INDEFINITE);
+        scaleTransition.setAutoReverse(true);
+
+        return scaleTransition;
+    }
+
+    private FadeTransition createOpacityTransition(Node node) {
+        FadeTransition scaleTransition = new FadeTransition(
+                Duration.millis(TRANSITION_DURATION / 2),
+                node);
+        scaleTransition.setFromValue(1);
+        scaleTransition.setToValue(0.5);
         scaleTransition.setCycleCount(Timeline.INDEFINITE);
         scaleTransition.setAutoReverse(true);
 
