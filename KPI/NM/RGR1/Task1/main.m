@@ -3,11 +3,9 @@ M = [1 0 0; 0 2 1; 1 0 1];
 
 % M = [-2 -2 3 ; -10 -1 6; 10 -2 -9];
 
-[lambda, x] = PowerMethodSecond(M);
+% [lambda, x] = PowerMethodSecond(M);
 
-[lambda_low, x_low] = PowerMethodSecond(inv(M));
+[lambda_low, x_low] = PowerMethodSecond(M);
 
+% [y, lam, iters] = power_method(3, inv(M), [100 100 100], 500, 0.01);
 [V W D] = eig(M);
-
-
-h = 1
