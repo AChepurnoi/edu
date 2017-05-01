@@ -1,5 +1,5 @@
 ## Kpi stuff 
 
-### NM - 
+### NM - numerical methods
 ### SP - C programming 
 ### GGM - JavaFX
