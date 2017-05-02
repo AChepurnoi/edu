@@ -15,9 +15,9 @@ M = [1 0 0; 0 2 1; 1 0 1];
 
 [eigvalue, eigvector] = PowerIteration(M);
 
-B = inv(M);
+B = M - eigvalue * eye(3);
 
 [smalleig, smalleigvector] = PowerIteration(B);
 
 [V D W] = eig(M);
-res = eigs(M, 3, 'sm');
+res = 
