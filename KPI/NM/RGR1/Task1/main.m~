@@ -14,10 +14,17 @@ M = [1 0 0; 0 2 1; 1 0 1];
 
 
 [eigvalue, eigvector] = PowerIteration(M);
+M = [5 
 
-B = M - eigvalue * eye(3);
+[seigval, seigvec] = PowerIterationSecondPair(M, eigvalue, eigvector, 0.001);
 
-[smalleig, smalleigvector] = PowerIteration(B);
+B = inv(M);
+
+H = eye(3) - 2 * eigvector * eigvector';
+
+
 
 [V D W] = eig(M);
-res = 
+res = eigs(M, 3, 'sm');
+
+
