@@ -1,1 +1,2 @@
-Stanford Machine learning course @ Coursera
+Stanford Machine learning course 
+@ Coursera
