@@ -1,4 +1,4 @@
-function [ eigval, eigvec ] = SMultJ( M )
+function [ eigval, eigvec ] = SMultJ( M, eigvecs, eigvals)
 %SMULTJ Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -6,6 +6,13 @@ y = ones(size(M,1),1);
 epsilon = 0.001;
 lambda_prev = ones(size(M,1),1);
 lambda = 1;
+q = 3;
+
+sum = 0;
+for k = eigvecs
+   sum = sum + norm(y * k') * k; 
+end
+y = y - sum;
 
 s = norm(y * y');
 p = norm(y);

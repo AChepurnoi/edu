@@ -18,7 +18,7 @@
  vals = eigval;
  vecs = eigvec;
  for k=2:size(M,1)
-    [nextval, nextvec] = SMultNext(M, vecs, 1);
+    [nextval, nextvec] = SMultNext(M, vecs);
     vals = [nextval vals];
     vecs = [nextvec vecs];
  end
