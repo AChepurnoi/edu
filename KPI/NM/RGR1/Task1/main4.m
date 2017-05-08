@@ -5,5 +5,7 @@
      -134 400 -139 -758 -418;
      704 -435 428 642 -743];
  
- [eigval, eigvec] = scalarMuplitplications1(M);
+%  M = [4 1 0; 1 2 1; 0 1 1];
+ 
+ [eigval, eigvec] = SMult(M);
  [V D W] = eig(M);

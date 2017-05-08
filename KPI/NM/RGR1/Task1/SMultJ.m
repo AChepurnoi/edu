@@ -1,11 +1,11 @@
-function [ eigval, eigvec ] = scalarMuplitplications1( M )
-%SCALARMUPLITPLICATIONS1 Summary of this function goes here
+function [ eigval, eigvec ] = SMultJ( M )
+%SMULTJ Summary of this function goes here
 %   Detailed explanation goes here
 
-y = [1 1 1 1 1]';
+y = ones(size(M,1),1);
 epsilon = 0.001;
-lambda_prev = [1 1 1 1 1]';
-lambda = [1 1 1 1 1]';
+lambda_prev = ones(size(M,1),1);
+lambda = 1;
 
 s = norm(y * y');
 p = norm(y);
@@ -21,7 +21,7 @@ for k = 1:inf
     lambda = s ./ t;
     z = y ./ p;
     
-    if all((lambda - lambda_prev) <= epsilon)
+    if (abs(lambda - lambda_prev) <= epsilon)
         break;
     end
     
@@ -29,8 +29,8 @@ for k = 1:inf
     
 end
 
-eigval = 1;
-eigvec = 1;
+eigval = lambda;
+eigvec = z;
 
 end
 
