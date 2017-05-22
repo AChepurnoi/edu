@@ -18,13 +18,13 @@ int readPDU(char * buffer, const char* pipe){
   int pipedc = open(pipe, O_RDONLY);
   if(pipedc < 0) handleError();
 
-  struct pollfd *pfds = createPollfd(pipedc, POLLIN);
-  if(poll(pfds, 1, -1) < 0) handleError();
+  // struct pollfd *pfds = createPollfd(pipedc, POLLIN);
+  // if(poll(pfds, 1, -1) < 0) handleError();
 
   int readed = read(pipedc,buffer, L2PDUSIZE);
   if(readed < 0) handleError();
   
-  free(pfds);
+  // free(pfds);
   close(pipedc);
   return readed;
 }
@@ -58,11 +58,11 @@ int sendResponse(char *response, int responseLen, const char* pipe){
     int pipedc = open(pipe, O_WRONLY);
     if(pipedc < 0) handleError();
 
-    struct pollfd *pfds = createPollfd(pipedc, POLLOUT);
-    if(poll(pfds, 1, -1) < 0) handleError();
+    // struct pollfd *pfds = createPollfd(pipedc, POLLOUT);
+    // if(poll(pfds, 1, -1) < 0) handleError();
     if(write(pipedc, response, responseLen) < 0) handleError();
 
-    free(pfds);
+    // free(pfds);
     close(pipedc);
     return 0;
 }
@@ -94,10 +94,15 @@ int removeL3Headers(char *buffer, int len){
 
 int r_layer1(char* buffer, const char *pipe){
 	
-	int len = readPDU(buffer, pipe);
-	char *response = malloc(RESPONSESIZE);
-	buildResponse(buffer, len, response);
-	sendResponse(response, RESPONSESIZE, pipe);
+	int result = -1;
+	int len = -1;
+	for(int i = 0; i < TTR && result < 0; i++){
+		len = readPDU(buffer, pipe);
+		char *response = malloc(RESPONSESIZE);
+		result = buildResponse(buffer, len, response);
+		sendResponse(response, RESPONSESIZE, pipe);
+	}
+	if(result) len = -1;
 	return len;
 }
 
@@ -105,6 +110,7 @@ int r_layer2(char *buffer, char* Lframe, const char *pipe){
 	int c = 0;
 	while(1){
 		int len = r_layer1(buffer + c, pipe);
+		if(len < 0) handleError();
 		*(Lframe) = *(buffer + c + 6);
 		c = c + len;
 		if(*Lframe) break;	
@@ -147,6 +153,5 @@ int r_layer4(const char* file, const char* pipe){
 
 void recieve(const char *file, const char *pipe){
 	r_layer4(file, pipe);
-
 }
 

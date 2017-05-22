@@ -16,11 +16,11 @@ void sendPDU(const char *buffer, int len, char *pipe){
   int pipedc = open(pipe, O_WRONLY);
   if(pipedc < 0) handleError();
 
-  struct pollfd *pfds = createPollfd(pipedc, POLLOUT);
-  if(poll(pfds, 1, -1) < 0) handleError();
+  // struct pollfd *pfds = createPollfd(pipedc, POLLOUT);
+  // if(poll(pfds, 1, -1) < 0) handleError();
   if(write(pipedc, buffer, len) < len) handleError();
 
-  free(pfds);
+  // free(pfds);
   close(pipedc);
 }
 
@@ -28,13 +28,13 @@ int readResponse(char *buffer, char *pipe){
   int pipedc = open(pipe, O_RDONLY);
   if(pipedc < 0) return -1;
 
-  struct pollfd *pfds = createPollfd(pipedc, POLLIN);
-  if(poll(pfds, 1, -1) < 0) handleError();
+  // struct pollfd *pfds = createPollfd(pipedc, POLLIN);
+  // if(poll(pfds, 1, -1) < 0) handleError();
 
   int len = read(pipedc,buffer,RESPONSESIZE);
   if(len < 0) handleError();
 
-  free(pfds);
+  // free(pfds);
   close(pipedc);
   return len;
 }

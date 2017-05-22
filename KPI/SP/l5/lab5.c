@@ -21,7 +21,6 @@
 		Magic numbers
 		Code style
 		Wrong bytes endian (have to flip bytes when storing values >1 byte)
-		Blocking open, poll looks pretty useless (NONBLOCK WRITE returns Device not ready, i don't know how to deal with it)
 
 */
 int main (int argc, char **argv){
