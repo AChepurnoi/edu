@@ -79,7 +79,7 @@ object Application {
                     .dropOut(0.5)
                     .nOut(1000)
                     .build())
-            .layer(1, OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
+            .layer(2, OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
                     .nIn(1000)
                     .weightInit(WeightInit.XAVIER)
                     .activation(Activation.SOFTMAX)
