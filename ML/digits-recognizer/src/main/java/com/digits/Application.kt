@@ -26,6 +26,7 @@ import org.nd4j.linalg.api.ndarray.INDArray
 import org.apache.commons.math3.fitting.leastsquares.LeastSquaresFactory.model
 import org.datavec.api.records.reader.impl.LineRecordReader
 import org.deeplearning4j.eval.Evaluation
+import org.nd4j.linalg.dataset.api.DataSet
 import org.nd4j.linalg.dataset.api.preprocessor.NormalizerStandardize
 
 
@@ -52,24 +53,34 @@ object Application {
 
     val train = RecordReaderDataSetIterator(reader, batchSize, labelIndex, numClasses)
 
-    val t1 = train.next()
+    val it1 = train.next().apply(DataSet::normalize).apply(DataSet::shuffle)
 
-    t1.normalize()
+    val data = it1.splitTestAndTrain(.75)
+
 
     val nConf = NeuralNetConfiguration.Builder()
             .seed(6)
             .iterations(10)
             .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-            .learningRate(0.1)
+            .learningRate(0.008)
+            .updater(Updater.NESTEROVS).momentum(0.9)
             .list()
             .layer(0, DenseLayer.Builder()
                     .nIn(784)
                     .weightInit(WeightInit.XAVIER)
                     .activation(Activation.RELU)
-                    .nOut(100)
+                    .dropOut(0.5)
+                    .nOut(1000)
+                    .build())
+            .layer(1, DenseLayer.Builder()
+                    .nIn(1000)
+                    .weightInit(WeightInit.XAVIER)
+                    .activation(Activation.RELU)
+                    .dropOut(0.5)
+                    .nOut(1000)
                     .build())
             .layer(1, OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
-                    .nIn(100)
+                    .nIn(1000)
                     .weightInit(WeightInit.XAVIER)
                     .activation(Activation.SOFTMAX)
                     .nOut(10)
@@ -77,18 +88,19 @@ object Application {
             .pretrain(false)
             .backprop(true)
             .build()
+    
 
     val model = MultiLayerNetwork(nConf)
     model.init()
     model.setListeners(ScoreIterationListener(10))
 
-    for (i in 1..320) {
-      model.fit(t1)
+    for (i in 1..120) {
+      model.fit(data.train)
     }
 
     val eval = Evaluation(numClasses)
-    val output = model.output(t1.featureMatrix)
-    eval.eval(t1.labels, output)
+    val output = model.output(data.test.featureMatrix)
+    eval.eval(data.test.labels, output)
     log.info(eval.stats())
 
 
