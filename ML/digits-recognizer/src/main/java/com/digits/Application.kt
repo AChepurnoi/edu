@@ -30,6 +30,7 @@ import org.datavec.api.writable.IntWritable
 import org.datavec.api.writable.Text
 import org.datavec.api.writable.Writable
 import org.deeplearning4j.eval.Evaluation
+import org.deeplearning4j.util.ModelSerializer
 import org.nd4j.linalg.cpu.nativecpu.NDArray
 import org.nd4j.linalg.dataset.api.DataSet
 import org.nd4j.linalg.dataset.api.preprocessor.NormalizerStandardize
@@ -59,10 +60,10 @@ object Application {
 
 
     val nConf = NeuralNetConfiguration.Builder()
-            .seed(6)
+            .seed(10)
             .iterations(1)
             .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-            .learningRate(0.006)
+            .learningRate(0.009)
             .updater(Updater.NESTEROVS).momentum(0.9)
             .list()
             .layer(0, DenseLayer.Builder()
@@ -70,10 +71,17 @@ object Application {
                     .weightInit(WeightInit.XAVIER)
                     .activation(Activation.RELU)
                     .dropOut(0.5)
-                    .nOut(1000)
+                    .nOut(500)
                     .build())
-            .layer(1, OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
-                    .nIn(1000)
+            .layer(1, DenseLayer.Builder()
+                    .nIn(500)
+                    .weightInit(WeightInit.XAVIER)
+                    .activation(Activation.RELU)
+                    .dropOut(0.5)
+                    .nOut(300)
+                    .build())
+            .layer(2, OutputLayer.Builder(LossFunctions.LossFunction.NEGATIVELOGLIKELIHOOD)
+                    .nIn(300)
                     .weightInit(WeightInit.XAVIER)
                     .activation(Activation.SOFTMAX)
                     .nOut(10)
@@ -81,14 +89,17 @@ object Application {
             .pretrain(false)
             .backprop(true)
             .build()
-    
+
 
     val model = MultiLayerNetwork(nConf)
     model.init()
     model.setListeners(ScoreIterationListener(10))
 
-    for (i in 1..120) {
+    val modelFile = File("model");
+
+    for (i in 1..1000) {
       model.fit(data.train)
+      if (i % 20 == 0) ModelSerializer.writeModel(model, modelFile, true)
     }
 
     val eval = Evaluation(numClasses)
@@ -109,7 +120,7 @@ object Application {
 
   }
 
-  private fun getTrainIterator(): RecordReaderDataSetIterator{
+  private fun getTrainIterator(): RecordReaderDataSetIterator {
     val reader = CSVRecordReader(1, ",")
     val file = File(TRAIN)
     reader.initialize(FileSplit(file))
@@ -117,7 +128,7 @@ object Application {
     return train
   }
 
-  private fun getTestIterator(): RecordReaderDataSetIterator{
+  private fun getTestIterator(): RecordReaderDataSetIterator {
     val reader = CSVRecordReader(1, ",")
     val file = File(TEST)
     reader.initialize(FileSplit(file))
