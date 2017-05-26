@@ -63,7 +63,7 @@ object Application {
             .seed(10)
             .iterations(1)
             .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-            .learningRate(0.009)
+            .learningRate(0.006)
             .updater(Updater.NESTEROVS).momentum(0.9)
             .list()
             .layer(0, DenseLayer.Builder()
