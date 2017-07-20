@@ -29,6 +29,10 @@ centroids = zeros(K, n);
 
 
 
+a = [1 2 3]
+
+
+
 
 
 
