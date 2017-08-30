@@ -25,15 +25,17 @@ for i=1:size(X,1)
     diffs = repmat(X(i,:),K,1) - centroids;
     min = norm(diffs(1,:));
     idxMin = 1;
-    for j = 2:size(diffs, 1)
-       currentMin = norm(diffs(j,:));
+    for j = 1:size(diffs, 1)
+       currentMin = norm(diffs(j,:))
        if currentMin < min
-           min = currentMin;
-           idxMin = j;
-       end
+           min = currentMin
+           idxMin = j
+        
     end
-   idx(i) = idxMin; 
+    
 end
+
+
 
 
 

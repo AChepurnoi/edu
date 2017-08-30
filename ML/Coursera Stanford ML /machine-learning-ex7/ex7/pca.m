@@ -7,9 +7,10 @@ function [U, S] = pca(X)
 % Useful values
 [m, n] = size(X);
 
+cov = (X' * X) / m;
+[U, S, V] = svd(cov);
 % You need to return the following variables correctly.
-U = zeros(n);
-S = zeros(n);
+
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: You should first compute the covariance matrix. Then, you

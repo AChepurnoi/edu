@@ -17,7 +17,7 @@ function centroids = computeCentroids(X, idx, K)
 centroids = zeros(K, n);
 
 data = horzcat(X, idx);
-labelCol = size(data, 2);
+labelCol = size(data, 2)
 % ====================== YOUR CODE HERE ======================
 % Instructions: Go over every centroid and compute mean of all points that
 %               belong to it. Concretely, the row vector centroids(i, :)
@@ -30,8 +30,8 @@ labelCol = size(data, 2);
 
 
 for i=1:size(centroids,1)
-    centroids(i,:) = mean(data(data(:,labelCol) == i,1:end - 1));
-  
+    centroids(i) = mean(data(data(:,labelCol) == i,1:end - 1));
+   
 end
 
 
