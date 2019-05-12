@@ -1,0 +1,16 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/sasha/programming/edu/ucu/scala/hw1/p1.scala:17:1: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0mdef eval(l: List[String]): Int = {[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/sasha/programming/edu/ucu/scala/hw1/p1.scala:27:1: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0massert(eval(List("1", "+", "2", "*", "3")) == 7)[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/sasha/programming/edu/ucu/scala/hw1/p1.scala:28:1: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0massert(eval(List("5", "*", "3", "+", "1")) == 16)[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/sasha/programming/edu/ucu/scala/hw1/p1.scala:29:1: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0massert(eval(List("5", "*", "3", "+", "1", "*", "5")) == 20)[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/sasha/programming/edu/ucu/scala/hw1/p1.scala:30:1: expected class or object definition[0m
+[0m[[0m[31merror[0m] [0m[0massert(eval(List("10", "*", "3", "+", "1", "+", "1", "+", "1")) == 33)[0m
+[0m[[0m[31merror[0m] [0m[0m^[0m
+[0m[[0m[31merror[0m] [0m[0m5 errors found[0m

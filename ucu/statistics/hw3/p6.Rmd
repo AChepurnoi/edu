@@ -1,0 +1,302 @@
+---
+title: "Problem 6"
+output:
+  html_notebook: default
+  html_document: default
+---
+```{r}
+install.packages('glmnet')
+install.packages('np')
+install.packages('rpart')
+install.packages("pROC")
+library (dplyr)
+library(tidyverse)
+library(glmnet)
+library(ggplot2)
+library("nlme")
+library("np")
+library(pROC)
+library(rpart)
+```
+
+### Item 1
+
+#### Subitem a 
+
+The idea behind LASSO is that it can select important features from all features and can handle multicollinearity in the data. If group of predictors are highly correlated, lasso picks only one of them and shrinks the others to zero. 
+
+Also, it doesn't assume normality of residuals no more. It might be much better to use it if you have a lot of correlated features and need to do some selection, because simple linear model might be not reliable and can't filter any features.
+
+
+#### Subitem b
+
+In Lasso scaling is crucial because we use L1 penalty on the coefficients. If we have different scale for different betas, this will lead to unreliable penalty because it's possible to change penalty by scaling the data up and down. So we need scaling for L1 to be reliable - penalization scheme is fair to all regressors. 
+
+```{r}
+data <- read_tsv('../data/telco.txt') %>% select(-index)
+```
+
+```{r}
+data
+```
+
+
+```{r}
+x <- data %>% select(-longmon)
+y <- data %>% select(longmon)
+x <- model.matrix(~. -1, x)
+y <- as.matrix(y)
+```
+
+
+There are different opinions should binary variables be scaled. I would say it is worth to compare, because sometimes scaling can help the model but will affect the interpretation of the model. 
+
+Ed variable is one-hot encoded in the model
+
+I am using glmnet package that does standartization for all variables by default. 
+
+#### Subitem c
+```{r}
+lasso <- glmnet(x, y, family="gaussian", alpha=1)
+lasso_csv <- cv.glmnet(x, y,family="gaussian", alpha=1)
+betas <- lasso$beta
+```
+
+```{r}
+coef(lasso)
+```
+
+This is plot of coef. values over different lambdas. Top axis indicates the number of non-zero coef.
+As we can see, log(lambda) ~ 0.5 is a good choise, so lambda ~ 1.6
+```{r}
+plot.glmnet(lasso, xvar='lambda', label=TRUE)
+```
+
+
+```{r}
+best_lambda <- lasso_csv$lambda.1se
+```
+
+
+```{r}
+best_lambda
+```
+
+Best lambda by cross validation is 1.6685 (this is the biggest lambda with 1% error sd from the smallest error)
+
+### Item 2
+ 
+ 
+#### Subitem a
+
+Linear model 
+
+```{r}
+fit.linear <- lm(longmon ~ address, data=data)
+```
+
+```{r}
+summary(fit.linear)
+```
+
+Regression plot
+
+```{r}
+ggplot(data, aes(y=longmon, x=address)) + geom_point() + geom_smooth(method='lm')
+```
+
+
+MSE of the fitted linear model 
+```{r}
+mean(resid(fit.linear)^2)
+```
+#### Subitem b
+
+Non linear model: $b_0 + e^{address * b_1 + b_2} + b_3 * address$
+
+```{r}
+models.nl <- nls(longmon ~ b0  + exp(address*(b1) + b2) + b3 * address, data=data, start=list(b0=1, b1=0.1, b2=1, b3=1), control = list(maxiter = 500))
+```
+
+```{r}
+summary(models.nl)
+```
+
+
+MSE of the non linear model 
+```{r}
+mean(resid(models.nl)^2)
+```
+
+Non Linear model plot
+
+```{r}
+ggplot(data, aes(y=longmon, x=address)) + geom_point() + geom_point(y=predict(models.nl), color='red')
+```
+
+As we can see, non linear model is slightly better comparing MSE to the linear model
+
+#### Subitem c
+
+In general, there is no closed-form expression for the best-fitting parameters, as there is in linear regression. Usually numerical optimization algorithms are applied to determine the best-fitting parameters. Also, residual normality is not required, unbiased estimates are much harder. 
+
+
+### Item 3
+
+#### Subitem a
+
+If we choose bandwidth too big - we will get very smooth curve that will have small sensitivity, which will lead to underfitting the data. If we choose small bandwidth - we will have high variance and overfitting the data. 
+
+
+#### Subitem b
+
+Fitting regression
+```{r}
+nw.bw = npregbw(longmon ~ address, data=data,  regtype = "lc", bwmethod = "cv.aic")
+model = npreg(bws=nw.bw);
+```
+
+```{r}
+summary(model)
+```
+
+Data plot
+```{r}
+plot(data$address, data$longmon)
+```
+
+Regression plot
+```{r}
+npplot(nw.bw, type="l")
+```
+
+#### Subitem c
+
+We can see that MSE is much lower comparing to the non linear model from previous item
+
+```{r}
+mean(resid(model)^2)
+```
+
+
+### Item 4
+
+#### Subitem a
+Fitted logistic regression
+
+```{r}
+m.log <- glm(as.factor(churn) ~ ., data=data, family=binomial(logit))
+```
+
+```{r}
+summary(m.log)
+```
+
+#### Subitem b
+Tenure estimated parameter is = -0.03169 - the bigger tenure value the less chance of churn. The odds changes by 0.97 for one unit increase of tenure
+
+
+#### Subitem c
+Selection of the best model: 
+```{r}
+step(glm(as.factor(churn) ~ ., data=data, family=binomial(logit)))
+```
+
+Factors with positive influence to the churn probability: edPost-undergraduate degree, wiremon, intercept
+Factors with negative influence to the churn probability: longmon, employ,  edSome college, edHigh school degree, edDid not complete high school, tenure
+
+Seems people that use internet have increased probability of churn (which can be the indicator of bad internet services). 
+
+
+
+```{r}
+log.best <- glm(formula = as.factor(churn) ~ tenure + ed + employ + longmon + 
+    wiremon, family = binomial(logit), data = data)
+```
+
+#### Subitem d
+Formula for computing the logits of the first:
+
+$\hat{y} = 0.9 -0.033x_{tenure} - 0.822x_{edDid not complete high school} - 0.57x_{edHigh school degree} + 0.144x_{edPost-undergraduate degree} - 0.371x_{edSome college} - 0.0338x_{employ} - 0.04x_{logmon} + 0.0144x_{wiremon} $
+
+after that we can compute probabilities as $y_{prediciton} = \frac{e^\hat{y}}{(1+e^\hat{y})}$
+
+
+We can select the threshold to detect the class (usually 0.5) and if probability > 0.5 - this is class 1, if <0.5 - this is class 0. 
+
+
+```{r}
+pred <- predict(log.best, type='response')[50:55]
+```
+
+```{r}
+data[50:55,]
+```
+
+Probabilities 
+```{r}
+pred
+```
+
+
+#### Subitem e
+Now we can build a classification table:
+```{r}
+predict <- predict(log.best, type = 'response')
+```
+
+Classification table with 0.5 threshold
+Left is ground truth and top is predicted value. We can see that we have 668 correctly classified non-churn customers, 58 clients that we classified as churn but in reality not (false positive), 169 clients that we classified as non-churn but in reality they are (false negative) and 105 as churn customers(which are real churn customers).
+
+
+```{r}
+#confusion matrix
+table(data$churn, predict > 0.5)
+```
+
+#### Subitem f
+Best threshold will be the value closest to the left top corner on the curve.
+```{r}
+my_roc <- roc(as.factor(data$churn), predict(log.best))
+best_thr <-  coords(my_roc, "best", ret = "threshold")
+best_thr <- exp(best_thr) / (1+ exp(best_thr))
+plot(my_roc, print.auc = TRUE)
+```
+
+Best threshold:
+```{r}
+best_thr
+```
+
+#### Subitem g
+With this threshold we gained more false positive errors, but we improved the quality of churn prediciton. Now the chance that we will miss the potential churn is lower, but we also have bigger under risk of false positive.
+```{r}
+#confusion matrix
+table(data$churn, predict > best_thr)
+```
+
+
+
+
+
+### Item 5
+#### Subitem a
+
+To perform splitting, algorithm will try to look for a splitting point from the values range of tenure that minimized the value of error function sum for splits. The error funciton used for regression tree is sum of squared errors. So once the splitting point is found, we have left and right subtree divided by the splitting point.  
+
+```{r}
+tree = rpart(longmon ~ ., data=data, control = rpart.control(maxdepth = 10))
+```
+
+#### Subitem b
+
+There are multiple approaches to pruning trees. 
+
+One is prune the tree after the tree is built. This can be done using the `cp` complexity parameter. It recursively snipping off the least important splits based on cp parameter. (R function: `prune`)
+
+Another approach is to limit the max depth of the tree on building so we don't have to prune it after.
+
+```{r}
+tree
+```
+

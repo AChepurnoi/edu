@@ -1,0 +1,134 @@
+---
+title: "Problem 3"
+output: html_notebook
+---
+
+### Importing libraries
+```{r}
+library(ggplot2)
+library(shiny)
+library(tidyverse)
+library(dplyr)
+```
+
+
+#### A
+Preparing sample means and sample variances
+```{r}
+e_means = c()
+e_vars = c()
+
+up = 10000
+for (m in seq(100,up,by=1)){
+  dist <- rnorm(m, 1, 1)
+  e_var <- var(dist)
+  e_mean <- mean(dist)
+  e_vars = c(e_vars, e_var)
+  e_means = c(e_means, e_mean)
+}
+
+data <- data.frame(
+  n=seq(100,up,by=1),
+  means=e_means,
+  vars=e_vars
+)
+```
+
+
+As we can see from the plot - Law of large numbers is supported. The more samples we take to estimate the mean/variance the closer our estimate to the real parameter value. 
+```{r}
+ggplot(data, aes(x=n, y=means)) + geom_point(alpha=1, size=0.1, color='darkblue')
+```
+
+
+```{r}
+ggplot(data, aes(x=n, y=vars))  + geom_point(alpha=1, size=0.1, color='darkblue')
+```
+
+We can use known variance of the distribution and estimate size for 1% error with 95% confidence. This formula is derived from the margin error formula. (Source: https://www.isixsigma.com/tools-templates/sampling-data/how-determine-sample-size-determining-sample-size/)  
+
+#### Sample size: 38414
+```{r}
+estimate_n_for_error <- function(error, var) {
+  return((qnorm(0.025))^2 * (var / error)^2)
+}
+
+estimate_n_for_error(0.01, 1)
+```
+
+
+#### B
+
+Constructing confidence interval for means.
+We're 95% confident that the interval captured the true mean of our data. Usually the smaller interval we have - the better, because we are more precise in our estimations
+```{r}
+data <- data %>% 
+  mutate(means_e_error=qnorm(0.975, mean=means, sd=vars) * 1 / sqrt(n)) %>% 
+  mutate(means_ci_up = means + means_e_error, 
+         means_ci_down= means - means_e_error) %>%
+  mutate(vars_up=(((n-1) * vars)/qchisq(0.005, df=n-1)),
+         vars_down=(((n-1) * vars)/qchisq(0.995, df=n-1)))
+  
+```
+
+
+```{r}
+ggplot(data) + 
+  geom_point(aes(x=n, y=means), alpha=1, size=0.05, color='darkblue') +
+  geom_line(aes(x=n, y=means_ci_up), alpha=1, size=0.05, color='red') +
+  geom_line(aes(x=n, y=means_ci_down), alpha=1, size=0.05, color='red')
+```
+
+
+Constructing confidence interval for variance
+We're 95% confident that the interval captured the true variance of our data. Usually the smaller interval we have - the better, because we are more precise in our estimations
+```{r}
+ggplot(data) + 
+  geom_point(aes(x=n, y=vars), alpha=1, size=0.05, color='darkblue') +
+  geom_line(aes(x=n, y=vars_up), alpha=1, size=0.05, color='red') +
+  geom_line(aes(x=n, y=vars_down), alpha=1, size=0.05, color='red')
+```
+
+## 2
+
+#### A
+
+Likelihood function
+
+$f(\nu | t_1...t_n) = \prod_{i=0}^{1...n}\frac{\Gamma(\frac{\nu+1}{2})} {\sqrt{\nu\pi}\,\Gamma(\frac{\nu}{2})} \left(1+\frac{t^2_i}{\nu} \right)^{\!-\frac{\nu+1}{2}},\!$
+
+#### B
+
+Simulate sample size of 100 samples with df=5 and optimize the likelihood function. I noticed this function is very unstable in convergence to the optimal value so I choose to run optimization multiple times to get more reliable results.
+
+
+```{r}
+estimations= (5)
+for (i in 1:1000){
+  tsamples <- rt(100, 5)
+  res = optimize(function(df) prod(dt(tsamples, df)), interval=c(1,  15), maximum = TRUE)
+  estimations = c(estimations, res$maximum)
+}
+```
+
+```{r}
+ggplot(data.frame(est=estimations)) + geom_histogram(aes(x=est), binwidth = 1, fill='green', alpha=0.5, color='black')
+```
+
+
+#### C
+
+To fit our T distribution to some real data we can use MLE and find the parameters that fits the data best. This is not going to be ideal fit but can give reasonable performance
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,297 @@
+---
+title: "Problem 4"
+output: html_notebook
+---
+#### Installing libraries
+```{r}
+install.packages("QuantPsyc")
+install.packages("gmodels")
+install.packages("moments")
+install.packages("olsrr")
+library('dplyr')
+library("QuantPsyc")
+library("gmodels")
+library("moments")
+library (MASS)
+library (dplyr)
+library(shiny)
+library(tidyverse)
+library("olsrr")
+library("nlme")
+```
+#### Reading data
+```{r}
+data <- read_tsv('data/telco.txt') %>% dplyr::select(-index)
+```
+
+#### Item 1
+To include ed into the model dummy variables should be used. We have a clear order in variable but we can't define the intervals and the intervals are not equal for sure. If we will add them as numerical column they will inherit unnecessary releationships and operations.
+
+```{r}
+unique(data$ed)
+```
+
+#### Item 2
+
+We can see that target variable highly skewed. We can also measure it and double check.
+```{r}
+ggplot(data) + geom_histogram(aes(x=longmon, fill=churn), color="black", alpha=0.5, binwidth=5)
+```
+
+```{r}
+skewness(data$longmon)
+```
+
+Taking log of target variable makes it much more normalized(skewness is almost 0)
+```{r}
+ggplot(data) + geom_histogram(aes(x=log(longmon), fill=churn), color="black", alpha=0.5)
+```
+
+```{r}
+ggplot(data) + geom_point(aes(x=address, y=longmon, color=churn))
+```
+Wiremon clearly have two subsets - 0 and not 0. The idea is to watch at statistics for each of these groups and inspect deeper. Possibly they have some hidden pattern why the data is splitted in this way
+```{r}
+ggplot(data) + geom_point(aes(x=wiremon, y=longmon, color=churn), bins=30)
+```
+
+
+```{r}
+ggplot(data) + geom_point(aes(x=tenure, y=longmon, color=churn))
+```
+
+
+```{r}
+ggplot(data) + geom_point(aes(x=age, y=longmon, color=churn))
+```
+
+Income has outliers that are far away from the majority of the data. Taking log of this variable is a good way to normalize the distribution and move outliers closer to the majority of the data 
+```{r}
+ggplot(data) + geom_point(aes(x=income, y=longmon, color=churn))
+```
+
+```{r}
+ggplot(data) + geom_point(aes(x=log(income), y=longmon, color=churn))
+```
+
+#### Item 3
+```{r}
+data <- read_tsv('data/telco.txt') %>% dplyr::select(-index)
+```
+
+
+```{r}
+data <- data %>% mutate(longmon=log(longmon),
+                income=log(income))
+```
+
+
+```{r}
+fit <- lm(longmon ~ ., data=data)
+```
+
+
+Summary of fitted linear model. We can see that some ed values are seems to be insignificant, and some are significant. We can run GLH test to check simultaneous significance of the ed variable
+```{r}
+summary(fit)
+```
+
+We have strong evidence that H0 should be rejected, so variable ed is significant
+```{r}
+R <- rbind(c(0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 ,0), c(0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0 ,0),
+           c(0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0 ,0), c(0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 ,0))
+r <- c(0, 0, 0, 0)
+```
+
+```{r}
+glh.test(fit, R, r)
+```
+
+#### Item 4
+We haven't applied any transformations to the address, ed or retire but we did log for target variable. 
+Address - if we change address by 1 , we’d expect our target variable longmon to change by 100 x $\beta_{address}$ percent
+
+
+Ed - if education level specified , we’d expect our target variable longmon to be bigger/lower by 100 x $\beta_{ed}$ percent. We need to keep in mind that one of the catregories is in intercept term so our baseline is not **no education** but rather **education level that is in intercept term**
+
+
+Retire - if retire , we’d expect our target variable longmon to be bigger/lower by 100 * $\beta_{retire}$ percent than having non retire
+
+#### Item 5
+Let's test the residuals are drawn from normal distribution
+
+
+High p-value indicates weak evidence against H0(samples are from the same distribution)
+
+```{r}
+ks.test(fit$residuals, "pnorm", mean=mean(fit$residuals), sd = sqrt(var(fit$residuals)))
+```
+
+Computin confidence intervals
+
+
+We're 95% confident that the interval captured the true parameter value of our data.
+
+
+Whenever an effect is significant, all values in the confidence interval will be on the same side of zero
+
+
+We can see that 0 included for income parameter and that means it is not significant.
+
+Address is significant
+```{r}
+confint(fit, c("address", "income"))
+```
+
+#### Item 6
+
+I am using default R's step optimization with backward optimization. Selection is performed using AIC. Removes the least important (by p-value) predictors and iteratively tries to find the best AIC model with least number of features. For R, model has provide add, drop and extractAIC method to be optimized with step function. 
+```{r}
+step(lm(longmon ~ .,data=data), direction='backward')
+```
+##### Best model 
+```{r}
+fit <- lm(formula = longmon ~ tenure + age + marital + address + income + 
+    ed + retire + gender, data = data)
+
+```
+
+```{r}
+
+summary(fit)
+```
+
+#### Item 7
+
+Measuring cook's distance
+
+We can see some number of very distant observations there
+```{r}
+distance <- cooks.distance(fit)
+cutoff <- 4/((nrow(data)-length(fit$coefficients)-2)) 
+```
+
+```{r}
+ggplot(data.frame(dist=distance)) + geom_point(aes(x=seq(length(dist)), y=dist)) + geom_hline(yintercept = cutoff)
+```
+
+Measureing leverage
+```{r}
+leverages <- hatvalues(fit)
+outlier <- which(leverages == max(leverages))
+```
+
+```{r}
+data %>% slice(outlier)
+```
+
+We can see that age of 2 is uncommon for this address group and is outlier. Same for the employ. This row is consist from outlier values from multiple feature spaces, which results in high leverage.
+```{r}
+ggplot(data) + geom_boxplot(aes(y=age, x=as.factor(address)))
+```
+
+```{r}
+ggplot(data) + geom_boxplot(aes(y=age, x=as.factor(employ)))
+```
+
+#### Item 8
+```{r}
+s <- slice(data, 5:10)
+s$address = NULL
+```
+
+```{r}
+s
+```
+We will implement imputation for address value with following strategies:
+
+1) the most popular along the dataset. Just take the median value for the data set and calculate the error of the imputation
+```{r}
+s <- slice(data, 5:10)
+gt <- s$address
+s$address = NULL
+m <-  median(data$address)
+```
+Error
+```{r}
+print(m)
+```
+
+
+```{r}
+s$address = m
+error <-  sum((gt - m)^2)
+```
+Error
+
+```{r}
+print(error)
+```
+
+
+2) Regression imputation. This is very baseline regression imputation that can be improved with improving the regression model. As we can see the error of the imputation is less than using just the median value. 
+```{r}
+s <- slice(data, 5:10)
+gt <- s$address
+s$address = NULL
+im = lm(address ~ ., data=data)
+predicted = round(predict(im, s))
+error = sum((gt - predicted)^2)
+```
+
+```{r}
+print(error)
+```
+
+If the value retires is missing we could try use classification model to impute the data. Also, it's possible to do clustering and assign values using clustering algorithms. If retire is missing from a small amount of the data - probably we could just drop the rows with missing data. 
+
+
+#### Item 9
+
+High p-value indicates there's not strong evidence that variance is significantly different for different values of address.
+The same we can see on the plots. If there is different variance for each group - FGLS can help to adjust predictions to the different variances. For example if we have exponential varieance we could estimate weigths that later will be applied to the coefficients and predictions of the model, adjusting them to the different variances. There are different models that can work with heteroscedasticity, their selection depends on how much information do you have. For example, do you know the real variance formula or it should be estimated(weighted gls/white estimator)
+
+```{r}
+add_count <- data %>% group_by(address) %>% count() %>% filter(n>1)
+btdat <- data %>% filter(address %in% add_count$address)
+model = lm(formula = longmon ~ tenure + age + marital + address + income + 
+    ed + retire + gender, data = btdat)
+```
+
+```{r}
+bartlett.test(formula=model$residuals ~ btdat$address)
+```
+
+
+```{r}
+ggplot(data.frame(residuals=model$residuals, address=btdat$address)) + 
+  geom_point(aes(x=address, y=residuals, group=address), color='red', alpha=0.5)
+```
+
+```{r}
+ggplotRegression <- function (fit) {
+
+require(ggplot2)
+i = 5
+ggplot(fit$model, aes_string(x = names(fit$model)[i], y = names(fit$model)[1])) + 
+  geom_point() +
+  stat_smooth(method = "lm", col = "red") +
+  labs(title = paste("Adj R2 = ",signif(summary(fit)$adj.r.squared, 5),
+                     "Intercept =",signif(fit$coef[[1]],5 ),
+                     " Slope =",signif(fit$coef[[i]], 5),
+                     " P =",signif(summary(fit)$coef[i,4], 5)))
+}
+```
+
+
+```{r}
+ggplotRegression(model)
+```
+
+
+
+
+
+
+
+

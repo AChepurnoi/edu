@@ -1,0 +1,175 @@
+---
+title: "Exploratory Data Analysis in R"
+output: html_notebook
+---
+
+## Set locale
+
+```{r}
+Sys.setlocale(category = 'LC_TIME', locale = 'en_US.UTF-8')
+```
+
+```{r}
+install.packages("visdat")
+```
+
+## Load libraries
+
+```{r}
+library(ggplot2)
+library(visdat)
+library(dplyr, quietly = T)
+library(tidyr)
+```
+
+
+## Read and prepare data
+
+```{r}
+df <- read.csv('electricity.csv', stringsAsFactors = FALSE)
+```
+
+
+## Take a look at the data
+
+```{r}
+head(df)
+```
+
+
+## Check data structure
+
+```{r}
+str(df)
+```
+
+
+## Check data summary
+
+```{r}
+summary(df)
+```
+
+
+## Visualize data structure
+
+```{r}
+vis_dat(df)
+```
+
+
+## What questions we can ask?
+
+- How consumption is distributed by day, week, month, season, year?
+- What is the structure of electricity production? Which energy source contributes the most?
+- What is the difference between production and consumption? Is there a deficit or proficit?
+- Can we recreate typical work day with this data?
+- Additional - is there relation between temperature and electricity consumption?
+
+## How do we have to prepare data to answer those questions?
+
+- Convert 'season' to a ordered factor
+- Extract date part from the datetime variable
+- Extract weekday from the date
+- Reshape data
+
+## Prepare data
+
+```{r}
+df <- df %>% 
+  mutate(date  = as.Date(datetime),
+         wday = weekdays(date, abbreviate = TRUE),
+         wday = factor(wday, ordered = TRUE, 
+                       levels = c('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')),
+         season = factor(season, ordered = TRUE,
+                         levels = c('Winter', 'Spring', 'Summer', 'Autumn')))
+```
+
+
+
+## Visualise distribution of electricity consumption (by season, month, weeekday)
+
+```{r}
+ggplot(df, aes(x=consumption)) + geom_histogram(start="count")
+```
+
+
+## Compare electricity consumption (by season, month, weekday)
+
+```{r}
+
+```
+
+## Visualize electricity consumption change in time
+
+```{r}
+ggplot(df, aes(x=date, y=consumption)) + geom_point(size=0.2)
+```
+
+## Visualize typical day in terms of electricity consumption
+
+```{r}
+
+```
+
+
+## Compare amount of electricity produced and consumed
+
+```{r}
+
+```
+
+
+
+## Reshape data
+
+```{r}
+df_long <- df %>% 
+  select(date, wday, hour, month, season, nuclear:hydro_gaes) %>% 
+  gather(key = 'type', value = 'production', 
+         -date, -wday, -hour, -month, -season)
+```
+
+```{r}
+head(df_long)
+```
+
+## Compare production by source type
+
+```{r}
+df_long %>% group_by(type) %>% summarise(production=sum(production)) %>% 
+  ggplot(aes(x=reorder(type, production), y=production)) + geom_col()
+```
+
+```{r}
+df_long %>% group_by(date, type)  %>% summarise(production = sum(production)) %>%
+  ggplot(aes(x=date, y=production, fill=type)) + geom_area()
+```
+
+
+## Load additional data
+
+```{r}
+weather <- read.csv('weather_vs_electricity_consumption.csv', stringsAsFactors = FALSE)
+```
+
+## Preview additional data
+
+```{r}
+head(weather)
+```
+
+## Convert season variable to ordered factor
+
+```{r}
+weather <- weather %>% 
+  mutate(season = factor(season, ordered = TRUE,
+                         levels = c('Winter', 'Spring', 'Summer', 'Autumn')))
+```
+
+## Visualise relation between temperature (tavg) and electricity consumption (consumption)
+
+```{r}
+
+```
+

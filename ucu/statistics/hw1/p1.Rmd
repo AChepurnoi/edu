@@ -1,0 +1,337 @@
+---
+title: "Problem 1 (Sasha Chepurnoi)"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+### Installing packages
+```{r}
+#install.packages("readxl")
+#install.packages("tidyverse")
+#install.packages("ggplot2")
+#install.packages("GGally")
+library(ggplot2)
+library(readxl)
+library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(reshape2)
+library(GGally)
+```
+
+
+### Reading data
+```{r}
+ceo <- read_xls("../data/ceo.xls")[,1:7]
+head(ceo)
+```
+
+## Task 1. 
+
+###a
+
+Salary dataset summary: 
+
+**Mean** is the average salary in the dataset
+
+**Min** is the lowest salary in the dataset
+
+**1st Qu.** is the value of the first quantile (0.25). Interpretation: smallest 25% of the salaries of the dataset are less or equal 1084
+
+**Median ** is effectively 0.5 quantile, median value of the salaries (50% of the salaries under value of median)
+
+**3rd Qu.** is quantile 0.75
+
+**Max** is the biggest salary value in the dataset
+
+**Trimmed 10% mean** is 1710. This value is significantly lower than non trimmed mean and could indicate some high outliers in the data, that shift the non trimmed mean to the higher value
+
+**Lower 10% quantile** shows that 10% of the smallest salaries are less or equal 750, while 10% of the biggest salariest are more than 3384.4
+
+```{r}
+#trimmed mean
+sprintf("Trimmed 10%% mean %.2f", mean(ceo$salary, trim=0.1))
+#Lowest 10% quantile
+sprintf("10%% lower quantile: %.2f", quantile(ceo$salary, prob=0.1))
+# Highest 10% quantile
+sprintf("10%% upper quantile: %.2f", quantile(ceo$salary, prob=0.9))
+#Summary
+summary(ceo$salary)
+
+```
+
+
+
+### b
+
+#### ECDF plot
+```{r}
+ggplot(ceo, aes(salary)) + stat_ecdf(geom='point', color='blue', alpha=0.4)
+```
+
+$y=\hat{F}^{-1}(0.2)$ Is the 0.2 quantile 
+
+$y=\hat{F}^{-1}(0.8)$ Is the 0.8 quantile
+
+$y=\hat{F}(1000)$ Is ecdf of 1000 - result is probability of the values from the distribution to be less of equal 1000. Computed value is 0.224 which indicates that 22.4% is probability of salary to be less than 1000. 
+
+$y=1 - \hat{F}(5000)$ Is probability of the salary value to be higher than 5000.
+Computed value is 0.053 which indicates that only 5.4% of salaries are higher than 5000!
+
+
+```{r}
+#b
+F = ecdf(ceo$salary)
+sprintf("0.2 quantile = %.3f", quantile(ceo$salary, prob=0.2))
+sprintf("0.8 quantile = %.3f", quantile(ceo$salary, prob=0.8))
+sprintf("F(1000) = %.3f", F(1000))
+sprintf("1 - F(5000) = %.3f", 1 - F(5000))
+```
+
+### c, d
+
+From the boxplot we can see that location measures that we computed before are still appropriate, because ggplot boxplot is using the same approach. 
+
+The documentation says: "The lower and upper hinges correspond to the first and third quartiles (the 25th and 75th percentiles). This differs slightly from the method used by the boxplot function, and may be apparent with small samples. See boxplot.stats() for more information on how hinge positions are calculated for boxplot". 
+
+Default boxplot implementation depends on the number of observations. 
+
+Given salary distribution is right-skewed (empirical skewness is >0)
+```{r}
+skew <- sum(((ceo$salary - mean(ceo$salary)) / sd(ceo$salary)) ^ 3) / dim(ceo)[1]
+
+sprintf("Skewness: %s", skew)
+sprintf("STD: %.3f", sd(ceo$salary))
+sprintf("Variance: %.3f", var(ceo$salary))
+```
+
+###
+Distribution is right-skewed because mean if shifted to the right of the median. (We can see a lot of outliers with high salary values)
+```{r}
+#c
+ggplot(ceo) +
+    geom_boxplot(aes(x="Salary", y=salary), color='black', fill='blue', alpha=0.4, show.legend = TRUE) + 
+    geom_hline(yintercept = quantile(ceo$salary, probs = 0.25), color='red', alpha=0.4) + 
+    geom_hline(yintercept = median(ceo$salary), color='red', alpha=0.4) + 
+    geom_hline(yintercept = quantile(ceo$salary, probs = 0.75), color='red', alpha=0.4) 
+
+```
+
+
+For bin number ggplot uses a fixed number of bins=30. We can regulate bin number or binwidth.
+
+To get the best value for bin/binwidth we should try to explore the data with different values and observe results. 
+
+Histogram can help us to approximately estimate the mean and distribution, visualise outliers and data range. With small number of bins we could see the general picture of disribution and trying different bin numbers we could find interesting patterns in data.
+
+
+```{r}
+s_median = median(ceo$salary)
+s_mean = mean(ceo$salary)
+mean_line = geom_vline(xintercept = s_mean, color='red', size=1.25) 
+median_line = geom_vline(xintercept = s_median, color='brown', size=1.25)
+
+
+ggplot(ceo) + geom_histogram(aes(x=salary), bins = 150, fill='cyan', color='black', alpha=0.7) +
+  mean_line + 
+  median_line + 
+  geom_label(x=s_mean, y=15, label='Mean') + 
+  geom_label(x=s_median, y=5, label='Median')
+ggplot(ceo) + geom_histogram(aes(x=salary), bins = 50, fill='cyan', color='black', alpha=0.7)  +
+  mean_line + 
+  median_line +
+  geom_label(x=s_mean, y=50, label='Mean') + 
+  geom_label(x=s_median, y=20, label='Median')
+ggplot(ceo) + geom_histogram(aes(x=salary), bins = 15, fill='cyan', color='black', alpha=0.7)  + 
+  mean_line + 
+  median_line +
+  geom_label(x=s_mean, y=180, label='Mean') + 
+  geom_label(x=s_median, y=50, label='Median')
+```
+
+
+### e 
+
+After applying log to the data, mean and median are much closer and distribution is less skewed.
+Variance of the data is also reduced significantly 
+
+Applying log to the data can help to deal with huge outliers, but we still have 0 outlier because log function can't help with 0 values. 
+
+```{r}
+#e
+ceo_log = ceo %>% mutate(salary_log=log(salary))
+l_mean = mean(ceo_log$salary_log)
+l_median = median(ceo_log$salary_log)
+
+mean_line = geom_vline(xintercept = l_mean, color='red', size=1.25) 
+median_line = geom_vline(xintercept = l_median, color='brown', size=1.25)
+
+ggplot(ceo_log) +
+  geom_boxplot(aes(x="Salary", y=salary_log), color='black', fill='blue', alpha=0.4)
+
+ggplot(ceo_log) + geom_histogram(aes(x=salary_log), bins = 150, fill='cyan', color='black', alpha=0.7) +
+  mean_line +
+  median_line +
+  geom_label(x=l_mean, y=15, label='Mean') + 
+  geom_label(x=l_median, y=5, label='Median')
+ggplot(ceo_log) + geom_histogram(aes(x=salary_log), bins = 50, fill='cyan', color='black', alpha=0.7) +
+  mean_line +
+  median_line +
+  geom_label(x=l_mean, y=40, label='Mean') + 
+  geom_label(x=l_median, y=10, label='Median')
+
+ggplot(ceo_log) + geom_histogram(aes(x=salary_log), bins = 15, fill='cyan', color='black', alpha=0.7) +
+  mean_line +
+  median_line +
+  geom_label(x=l_mean, y=90, label='Mean') + 
+  geom_label(x=l_median, y=30, label='Median')
+
+skew <- sum(((ceo_log$salary_log - mean(ceo_log$salary_log)) / sd(ceo_log$salary_log)) ^ 3) / dim(ceo_log)[1]
+
+sprintf("Skewness: %s", skew)
+
+```
+
+
+## Task 2.
+
+### a
+From the correlation matrix we can see that we have some important correlations. 
+
+Highly correlated variables with salary: sales, profits, assets, totcomp. 
+
+All these values are highly releated to the economical value of the company and also highly correlate with salary. Also, we can detect squares of correlation on the plot. **salary-totcomp** square, **tenure-age **square and **sales-profits-assets** square. 
+```{r}
+ceo_corr <- ceo %>% cor
+ceo_corr
+ceo_corr_melt <- ceo_corr %>% melt
+ggplot(data = ceo_corr_melt, aes(x=Var1, y=Var2, fill=value)) + geom_tile()
+```
+
+### b
+From the pairs scatter plot, we can see that pairs with high correlation have noticeable linear dependency in the data. 
+```{r}
+ggpairs(ceo, 1:7, progress = FALSE)
+```
+
+Spearman correlation results shows us that we missed another one square of correlations in the data comparing to Pearson. We can see that **assets-profits-sales** and **salary-totcomp** are also highly correlated.  
+```{r}
+ceo_corr <- ceo %>% cor(method='spearman')
+ceo_corr
+ceo_corr_melt <- ceo_corr %>% melt
+ggplot(data = ceo_corr_melt, aes(x=Var1, y=Var2, fill=value)) + geom_tile()
+```
+Rank is the index of the value in the ordered array. 
+
+Using the default rank implementation let's compute the rank of the salary value of 6000: Rank value *429* and *430* as we have multiple entries of salary equals 6000. Rank values for duplicated salaries may vary when using different ties.method. 
+
+Documentation: 
+
+"If all components are different (and no NAs), the ranks are well defined, with values in seq_along(x). With some values equal (called ‘ties’), the argument ties.method determines the result at the corresponding indices. The "first" method results in a permutation with increasing values at each index set of ties, and analogously "last" with decreasing values. The "random" method puts these in random order whereas the default, "average", replaces them by their mean, and "max" and "min" replaces them by their maximum and minimum respectively, the latter being the typical sports ranking."
+
+```{r}
+rank(ceo$salary, ties.method = 'first')[ceo$salary == 6000]
+```
+
+### c
+Splitting dataframe into older/younger CEOs
+```{r}
+younger = ceo %>% filter(age < 50)
+F_y = ecdf(younger$salary)
+older = ceo %>% filter(age >=50)
+F_o = ecdf(older$salary)
+```
+
+
+After splitting data into 2 groups we can see significant difference between these groups. 
+
+For older CEO group we see much higher std value, higher median, higher mean value and some amount of high salary outliers. This could tell us that older CEOs tend to earn more than younger CEOs.
+
+For younger CEOs we have much smalled std for salaries and smalled mean/median values.
+```{r}
+ggplot() + 
+  stat_ecdf(data=younger, mapping=aes(x=salary), color='red',geom='point') + 
+  stat_ecdf(data=older, mapping=aes(x=salary), color='blue',geom='point')
+
+ggplot() + 
+  geom_histogram(data=younger, mapping=aes(x=salary), fill='blue', alpha=0.5, bins=50) + 
+  geom_histogram(data=older, mapping=aes(x=salary), fill='red', alpha=0.5, bins=50)
+
+sprintf("Older std: %.3f", sd(older$salary))
+sprintf("Younger std: %.3f", sd(younger$salary))
+
+summary(older$salary)
+summary(younger$salary)
+
+```
+
+
+## Task 3:
+
+### a
+```{r}
+salary_groups = c(0, 2000, 4000, max(ceo$salary))
+age_groups = c(0, 50, max(ceo$age))
+
+S = ceo %>% 
+  mutate(salary_group = cut(salary, breaks=salary_groups, include.lowest = TRUE, right = FALSE)) %>%
+  mutate(age_group = cut(age, breaks=age_groups, include.lowest = TRUE, right=FALSE))
+
+salary_age_cor <- S %>%
+  group_by(salary_group, age_group) %>% 
+  summarise(c = cor(salary, age)) %>%
+  spread(age_group, c)
+
+crosstab <- table(S$age_group, S$salary_group)
+S_abs <-  crosstab %>% addmargins
+
+S_rel <- prop.table(crosstab) %>% addmargins
+```
+
+### Table with absoulte frequencies
+```{r}
+S_abs
+```
+
+### Table with relative frequencies
+```{r}
+S_rel
+```
+
+### b
+$n_{12}=9$ - absoule value of CEOs with age less 50 and salary between 2000 and 4000
+
+$h_{12}=0.02$ - relative value of the CEO with age less 50 and salary beween 2000 and 4000 (2% from total!)
+
+$n_{1.}=62$ - absoulte value of CEOs under 50
+
+$h_{1.}=0.13$ - relative value of the CEOs under 50 (13%)
+
+
+### c
+
+Computing dependency measure between A and S groups ($C_{corr}$)
+
+$C_{corr}=0.205$ shows us the weak correlation between A and S group. 
+
+From this value we can conclude that higher age of the CEO can result in higher salary. 
+```{r}
+nrow <- dim(crosstab)[1]
+ncol <- dim(crosstab)[2]
+chi_squared <- 0
+for (row in seq(nrow)) {
+  for (col in seq(ncol)) {
+      n_aprox = S_abs[row, ncol + 1] * S_abs[nrow + 1, col] / S_abs[nrow + 1, ncol + 1]
+      chi = ((S_abs[row, col] - n_aprox) ^ 2) / (n_aprox)
+      chi_squared <- chi_squared + chi
+      
+  }
+}
+c = sqrt(chi_squared / (chi_squared + S_abs[nrow + 1, ncol + 1]))
+c_max = sqrt((min(nrow, ncol) - 1) / min(nrow, ncol))
+c_corr = c / c_max
+sprintf("C_corr = %.3f", c_corr)
+```
+
+

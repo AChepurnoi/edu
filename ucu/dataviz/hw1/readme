@@ -1,0 +1,20 @@
+
+Завдання: Відтворити візуалізації даних New York Times та Washington Post максимально близько до оригіналу.
+
+Ви можете використовувати будь-який доступний вам інструмент (не обов'язково ggplot2 чи altair).
+
+Зверніть увагу, що у візуалізаціях New York Times та Washington Post дані наводяться у градусах Цельсія, але в даних у csv файлі - ні. Не варто на цьому етапі переводити одну розмірність в іншу, просто відтворіть структуру візуалізації на основі цих даних. 
+
+Також зверніть увагу, що вам потрібно буде трохи трансформувати дані.
+
+Дедлайн: 6 лютого
+
+Максимальний бал за це завдання: 20
+
+Джерело даних: https://data.giss.nasa.gov/gistemp/
+
+Оригінальна візуалізація New York Times: https://www.nytimes.com/interactive/2018/01/18/climate/hottest-year-2017.html 
+
+Оригінальна візуалізація Washington Post: https://www.washingtonpost.com/news/energy-environment/wp/2018/01/18/2017-was-among-the-planets-hottest-years-on-record-government-scientists-report/
+
+

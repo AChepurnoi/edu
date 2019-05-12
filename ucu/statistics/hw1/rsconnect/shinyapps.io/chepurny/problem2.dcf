@@ -1,0 +1,13 @@
+name: problem2
+title: Problem2
+username:
+account: chepurny
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 504671
+bundleId: 1634111
+url: https://chepurny.shinyapps.io/problem2/
+when: 1539168162.74319
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: UCU-Statistics-Assignment-0.pdf|p0.nb.html|p1.Rmd|p1.nb.html|p1_chepurny.pdf

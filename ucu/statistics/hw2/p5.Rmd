@@ -1,0 +1,87 @@
+---
+title: "Problem 5"
+output: html_notebook
+---
+
+
+```{r}
+ggplotRegression <- function (fit, i) {
+
+require(ggplot2)
+ggplot(fit$model, aes_string(x = names(fit$model)[i], y = names(fit$model)[1])) + 
+  geom_point() +
+  stat_smooth(method = "lm", col = "red") +
+  labs(title = paste("Adj R2 = ",signif(summary(fit)$adj.r.squared, 5),
+                     "Intercept =",signif(fit$coef[[1]],5 ),
+                     " Slope =",signif(fit$coef[[i]], 5),
+                     " P =",signif(summary(fit)$coef[i,4], 5)))
+}
+```
+
+```{r}
+y <- cars$speed
+yu <- y + 10
+yl <- y - 10
+x <- cars$dist
+xu <- x + 10
+```
+
+```{r}
+
+fit <- lm(y ~ x)
+fit_up <- lm(yu ~ x)
+fit_down <- lm(yl ~ x)
+fit_right <- lm(y ~ xu)
+```
+#### A
+
+When we add or subtract 10 from X or Y we only affect the intercept term. Neither R squared nor slope is changing in this case. This is constant change(shift) that can be described by intercept term fully. 
+
+
+```{r}
+ggplot(data.frame(x=x, y=y)) + geom_point(aes(x=x, y=y))
+```
+
+```{r}
+ggplotRegression(fit, 2)
+```
+```{r}
+ggplotRegression(fit_up, 2)
+```
+```{r}
+ggplotRegression(fit_down, 2)
+```
+
+#### B 
+
+Same for chaning x as described in **A**
+
+```{r}
+ggplotRegression(fit_right, 2)
+```
+
+#### C
+As we can see - scaling doesn't affect value of R2. Also, we can see that intercept value is significantly lower and very close to 0 in this case (because we removed unconidional mean). Also, Slope is much bigger. 
+
+Shifting the regression by 10 have same effect as without demeaning - intercept is changed by small value (because 10 is relatively small value on the Y initial range)
+```{r}
+fit <- lm(y ~ x)
+fit_norm <- lm(scale(y) ~ scale(x))
+fityu_norm <- lm(scale(yu) ~ scale(x))
+```
+
+
+
+```{r}
+ggplotRegression(fit_norm, 2)
+```
+
+```{r}
+ggplotRegression(fityu_norm, 2)
+```
+
+
+
+
+
+

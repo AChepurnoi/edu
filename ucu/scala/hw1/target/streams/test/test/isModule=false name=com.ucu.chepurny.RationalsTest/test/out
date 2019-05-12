@@ -1,0 +1,9 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mRationalsTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRationals[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should support add operation[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should support subtraction operation[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should support multiplication operation[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should support div operation *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  1/1 did not equal 1/2 (RationalsTest.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be optimized[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should have toString[0m[0m
