@@ -1,3 +1,3 @@
-# edu
+## edu
 
-For educational purposes. Contains all educational projects (KPI labs, Coursera etc)
+For educational purposes. Contains all educational materials and projects
