@@ -1,8 +1,12 @@
 # DL HW2
 
-## Scalar evaluation - >10m per batch size 2
+## Scalar evaluation
 
-## Vectorized evaluation - 0.7s per batch size 2
+#### >10m per batch size 2
+
+## Vectorized evaluation 
+
+#### <0.7s per batch size 2
 ```
 (.env) sasha-macbook:dl sasha$ python simple_conv_net_train.py --log-interval=10 --batch-size=2
 Train Epoch: 1 [0/60000 (0%)]   Loss: 2.375791  Batch Time: 0.75 seconds
@@ -20,7 +24,9 @@ Train Epoch: 1 [220/60000 (0%)] Loss: 1.017997  Batch Time: 0.80 seconds
 Train Epoch: 1 [240/60000 (0%)] Loss: 1.112615  Batch Time: 0.69 seconds
 ```
 
-## Pytorch evaluation - <0.01s per batch size 2
+## Pytorch evaluation
+
+#### <0.01s per batch size 2
 ```
 (.env) sasha-macbook:dl sasha$ python simple_conv_net_train.py --log-interval=10 --batch-size=2
 Train Epoch: 1 [0/60000 (0%)]   Loss: 2.407181  Batch Time: 0.03 seconds
