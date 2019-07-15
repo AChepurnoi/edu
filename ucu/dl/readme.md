@@ -1,5 +1,19 @@
 # DL HW2
+## Training - Score 98.76%
+```
+Train Epoch: 20 [0/60000 (0%)]  Loss: 0.002840  Batch Time: 0.04 seconds
+Train Epoch: 20 [6400/60000 (11%)]      Loss: 0.002581  Batch Time: 0.03 seconds
+Train Epoch: 20 [12800/60000 (21%)]     Loss: 0.000628  Batch Time: 0.03 seconds
+Train Epoch: 20 [19200/60000 (32%)]     Loss: 0.000575  Batch Time: 0.03 seconds
+Train Epoch: 20 [25600/60000 (43%)]     Loss: 0.001139  Batch Time: 0.03 seconds
+Train Epoch: 20 [32000/60000 (53%)]     Loss: 0.002483  Batch Time: 0.03 seconds
+Train Epoch: 20 [38400/60000 (64%)]     Loss: 0.003727  Batch Time: 0.04 seconds
+Train Epoch: 20 [44800/60000 (75%)]     Loss: 0.001257  Batch Time: 0.04 seconds
+Train Epoch: 20 [51200/60000 (85%)]     Loss: 0.002347  Batch Time: 0.03 seconds
+Train Epoch: 20 [57600/60000 (96%)]     Loss: 0.001752  Batch Time: 0.03 seconds
 
+Test set: Average loss: -0.9853, Accuracy: 9876/10000 (98.76%)
+```
 ## Scalar evaluation
 
 #### >10m per batch size 2
